@@ -1,6 +1,6 @@
 {
     "name": "beanVSCode",
-    "version": "0.0.1",
+    "version": "0.3.4",
     "description": "My Smart Contract",
     "main": "index.js",
     "engines": {
@@ -23,6 +23,8 @@
     "devDependencies": {
         "chai": "^4.2.0",
         "eslint": "^5.9.0",
+        "fabric-client": "^1.4.0",
+        "fabric-network": "^1.4.0",
         "mocha": "^5.2.0",
         "nyc": "^13.1.0",
         "sinon": "^7.1.1",
