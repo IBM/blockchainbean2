@@ -4,6 +4,15 @@
 
 This code pattern is based on a recent proof-of-concept developed in collaboration with a coffee roasting company that was nice enough to let us use their supply-chain documents. The link to the application that the code pattern is based off of is here: https://www.ibm.com/thought-leadership/blockchainbean/
 
+The finished product has a UI that interacts with our blockchain client app (in the 
+form of a Loopback API) which allows you to query for cups of coffee that are poured. 
+Each cup has a history based on which batch of coffee was used make the cup, which you 
+can see below. Additionally, you can see other details such as who poured the cup, 
+at what time the cup was poured, which type of beans were used, etc.
+
+![packageFile](/docs/bean.png)
+
+
 All documents that were used in the supply chain are available online, and can be found by clicking the view the blockchain button at https://www.ibm.com/thought-leadership/blockchainbean/
 
 In this Code Pattern we will create a blockchain app that increases visibility and efficiency in the supply chain of a coffee retailer. We will use different transactions to show different possible actions for the different participants in the supply chain. This sample application will record all transactions on the IBM Blockchain V2 Beta, and enable a coffee retailer to ensure the customer that their coffee is organic and fair-trade. The Code Pattern can be useful to developers that are looking into learning more about creating applications that integrate supply chains with Hyperledger Fabric.
@@ -18,7 +27,7 @@ Deploy a Node.js app in the cloud that will interact with our smart contract
 ## Requirements
 
 We will use the 
-[IBM Blockchain Platform Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform) to package our smart contract.
+[IBM Blockchain Platform Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform) to package our smart contract. 
 
 You will need the following installed in order to use the extension:
 - [VSCode version 1.31 or greater](https://code.visualstudio.com)
