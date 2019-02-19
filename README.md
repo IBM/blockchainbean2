@@ -152,7 +152,32 @@ web-app$ npm start
 
 In your browser, go to http://localhost:3000/explorer/
 
-and click on `GrowerController`.
+and click on `GrowerController`. You should see the Controller expand with the GET/POST methods.
+Click on the green `POST/Grower` button and then `Try it out` to the right of the `POST/Grower` button.
+This will enable you to write in a request body. Go ahead and copy and paste the following JSON in 
+to the request body. P.S. (I have made all the commands available in the `commands.txt` file). 
+
+```
+{
+  "$class": "org.ibm.coffee.Grower",
+  "isFairTrade": true,
+  "growerId": "Grower-0201",
+  "organization": "Ethiopia Gedeb 1 Banko Gotiti GrainPro",
+  "address": {
+    "$class": "org.ibm.coffee.Address",
+    "city": "Gedeb",
+    "country": "Ethiopia",
+    "street": "N/A",
+    "zip": "N/A"
+  }
+}
+```
+
+Then click the blue `Execute` button under the request body. If all goes well, you should see something similar to 
+the image below:
+
+![packageFile](/docs/grower.png)
+
 
 
 

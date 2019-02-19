@@ -6,6 +6,8 @@
   "address": {
     "$class": "org.ibm.coffee.Address",
     "city": "Gedeb",
-    "country": "Ethiopia"
+    "country": "Ethiopia",
+    "street": "N/A",
+    "zip": "N/A"
   }
 }

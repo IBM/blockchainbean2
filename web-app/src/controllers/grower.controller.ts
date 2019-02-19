@@ -32,6 +32,8 @@ export class GrowerController {
   async growerCreate(@requestBody() requestBody: Grower): Promise<ResponseMessage> {
     try {
       let networkObj = await blockchainClient.connectToNetwork();
+      console.log('request body: ')
+      console.log(requestBody)
       let dataForAddMember = {
         function: 'addMember',
         id: requestBody.growerId,

@@ -43,11 +43,6 @@ export class Address {
   @property({name: 'zip'})
   zip?: string;
 
-  /**
-   * 
-   */
-  @property({name: 'id'})
-  id?: string;
 
 }
 
