@@ -18,8 +18,7 @@ Deploy a Node.js app in the cloud that will interact with our smart contract
 ## Requirements
 
 We will use the 
-[IBM Blockchain Platform Extension for VSCode](https://marketplace.visualstudio.com/items?
-itemName=IBMBlockchain.ibm-blockchain-platform) to package our smart contract.
+[IBM Blockchain Platform Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform) to package our smart contract.
 
 You will need the following installed in order to use the extension:
 - [VSCode version 1.31 or greater](https://code.visualstudio.com)
