@@ -26,16 +26,20 @@ web-app$ npm install
 
  5. Next, we have to package the smart contract. Click on the *F1* button on your keyboard,
  which will bring up the VSCode command pallete. From there, navigate and click on `Package a Smart Contract Project`.
+  ![packageFile](/docs/pack.png)
+
+
  Next, the extension will ask the following question:
  ```
  Choose a workspace folder to package
  ```
- Click on the *lib* folder - note we do not want to package our client (i.e. our web-app directory). We need to package 
- just our smart contract, which is contained in our *lib* folder.
+ Click on the *lib* folder - note we do not want to package our client (i.e. our web-app directory).
+
+  ![packageFile](/docs/lib.png)
 
  If all went well, you should see the following. 
 
-  ![packageFile](/docs/packageSmartContract.png)
+  ![packageFile](/docs/packageSuccess.png)
  
  Note that this `.cds` file is extremely important if we want to run 
  our smart contract on the cloud. 
