@@ -2,6 +2,55 @@
 
 # Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform 2.0 Beta
 
+This code pattern is based on a recent proof-of-concept developed in collaboration with a coffee roasting company that was nice enough to let us use their supply-chain documents. The link to the application that the code pattern is based off of is here: https://www.ibm.com/thought-leadership/blockchainbean/
+
+All documents that were used in the supply chain are available online, and can be found by clicking the view the blockchain button at https://www.ibm.com/thought-leadership/blockchainbean/
+
+In this Code Pattern we will create a blockchain app that increases visibility and efficiency in the supply chain of a coffee retailer. We will use different transactions to show different possible actions for the different participants in the supply chain. This sample application will record all transactions on the IBM Blockchain V2 Beta, and enable a coffee retailer to ensure the customer that their coffee is organic and fair-trade. The Code Pattern can be useful to developers that are looking into learning more about creating applications that integrate supply chains with Hyperledger Fabric.
+
+When the reader has completed this Code Pattern, they will understand how to:
+
+Interact with the (free) IBM Blockchain Platform V2 Beta
+Build a blockchain back-end using Hyperledger Fabric
+Create and use a (free) Kubernetes Cluster
+Deploy a Node.js app in the cloud that will interact with our smart contract
+
+## Requirements
+
+We will use the 
+[IBM Blockchain Platform Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform) to package our smart contract.
+
+You will need the following installed in order to use the extension:
+- [VSCode version 1.31 or greater](https://code.visualstudio.com)
+- [Node v8.x or greater and npm v5.x or greater](https://nodejs.org/en/download/)
+- [Yeoman (yo) v2.x](http://yeoman.io/)
+- [Docker version v17.06.2-ce or greater](https://www.docker.com/get-docker)
+- [Docker Compose v1.14.0 or greater](https://docs.docker.com/compose/install/)
+
+> ⚠ Please note: From version 0.1.0+, your smart contract package.json should depend on at least fabric-contract@1.4.0-beta2. This is only required for smart contracts not created using version 0.1.0+ of this extension.
+
+If you are using Windows, you must also ensure the following:
+- Your version of Windows supports Hyper-V and Docker:
+  - Windows 10 Enterprise, Pro, or Education with 1607 Anniversary Update or later
+- Docker for Windows is configured to use Linux containers (this is the default)
+- You have installed the C++ Build Tools for Windows from [windows-build-tools](https://github.com/felixrieseberg/windows-build-tools#windows-build-tools)
+- You have installed OpenSSL v1.0.2 from [Win32 OpenSSL](http://slproweb.com/products/Win32OpenSSL.html)
+  - Install the normal version, not the version marked as "light"
+  - Install the Win32 version into `C:\OpenSSL-Win32` on 32-bit systems
+  - Install the Win64 version into `C:\OpenSSL-Win64` on 64-bit systems
+
+If you require sudo/root to install npm modules, the extension won't be able to automatically install the generator that is used to create a smart contract project. You will need to run the following command to install the dependencies:
+
+`npm install -g yo generator-fabric`
+
+You can check your installed versions by running the following commands from a terminal:
+- `node --version`
+- `npm --version`
+- `yo --version`
+- `docker --version`
+- `docker-compose --version`
+
+
 # Steps (Local Deployment)
 
 1. [Clone the Repo](#step-1-clone-the-repo)
