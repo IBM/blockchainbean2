@@ -18,15 +18,15 @@ HoreaPorutiu$ cd blockchainbean2/web-app
 web-app$ npm install
 ```
 
- ![packageFile](/docs/rightClick.png)
+![packageFile](/docs/rightClick.png)
 4. Right-click under your folders in your workspace area and then click *Add Folder to Workspace* and then highlight the 
 `blockchainbean/lib` directory as shown in the picture below, and then click on *add*:
 
- ![packageFile](/docs/addSmartContract.png)
+![packageFile](/docs/addSmartContract.png)
 
  5. Next, we have to package the smart contract. Click on the *F1* button on your keyboard,
  which will bring up the VSCode command pallete. From there, navigate and click on `Package a Smart Contract Project`.
-  ![packageFile](/docs/pack.png)
+![packageFile](/docs/pack.png)
 
 
  Next, the extension will ask the following question:
@@ -47,36 +47,37 @@ web-app$ npm install
  6. Next, it's time to install and instantiate our contract on the peer. First click on the blockchain icon in the 
  left side of VSCode. Once you click it, you should see `Smart Contract Packages` and the blockchainbean2@0.0.1 package 
  there. In my picture I have other contracts there as well.
-      ![packageFile](/docs/blockchainView.png)
+![packageFile](/docs/blockchainView.png)
 
- 
   Go ahead and start your local fabric by clicking on the 
  *three dot symbol* to the right of *LOCAL FABRIC OPS*
  and then *Start Fabric Runtime*. Once the runtime is finished starting, under *Local Fabric 
  Ops* you should see *Smart Contracts* and a section for both *installed* and *instantiated*.
-     ![packageFile](/docs/contracts.png)
 
-
+![packageFile](/docs/contracts.png)
 
  7. Now, let's click on *+ Install* and choose the peer that is available. Then the extension will ask you which package to 
  install. Choose *blockchainbean2@0.0.1* as shown in the picture.
-    ![packageFile](/docs/choosePackage.png)
+![packageFile](/docs/choosePackage.png)
 
  
   If all goes well, you should get a notification as shown 
  below.
-   ![packageFile](/docs/successInstall.png)
+
+![packageFile](/docs/successInstall.png)
 
 
 
  8. Next, it's time to instantiate. You guessed it.
  
   Click on *+ Instantiate* 
-   ![packageFile](/docs/instantiate.png)
+
+![packageFile](/docs/instantiate.png)
 
 and then choose 
  *mychannel* for the channel to instantiate the contract on.
-   ![packageFile](/docs/channel.png)
+
+![packageFile](/docs/channel.png)
 
 
  
@@ -98,20 +99,34 @@ and then choose
  
   This will instantiate the smart contract. You should see the contract 
  under the *instantiated* tab on the left-hand side, as shown in the picture. 
- ![packageFile](/docs/instantiated.png)
+
+![packageFile](/docs/instantiated.png)
 
 
  9. Nice. We're pretty much ready to submit transactions on our contract. Go ahead and go 
  into your web-app directory and run the query script with the commands shown below. 
 
-![packageFile](/docs/queryScript.png)
-
-
-```
+ ```
 blockchainbean2$ cd web-app
 web-app$ node query.js
 
 ```
+Your output should be the following:
+
+![packageFile](/docs/queryScript.png)
+
+
+All we have done, is queried the ledger for all data. 
+There is none, since we haven't added anything to the ledger. Ok. Now, let's add our first 
+member to the ledger, the grower. To do this, we will start our web-app and interact with our
+app to submit transactions to the network. 
+
+10. 
+
+
+
+
+
 
 
 
