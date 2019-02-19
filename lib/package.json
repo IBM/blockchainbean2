@@ -1,6 +1,6 @@
 {
     "name": "blockchainbean2",
-    "version": "0.0.4",
+    "version": "0.0.1",
     "description": "My Smart Contract",
     "main": "index.js",
     "engines": {
