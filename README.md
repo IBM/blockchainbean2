@@ -2,24 +2,32 @@
 
 # Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform 2.0 Beta
 
-This code pattern is based on a recent proof-of-concept developed in collaboration with 
-a coffee roasting company that was nice enough to let us use their supply-chain documents.
-The link to the application that the code pattern is based off of is here: https://www.ibm.com/blockchainbean
+## Run the app locally
+1. Git clone this repo onto your computer in the destination of your choice, then go into the web-app folder:
+```
+HoreaPorutiu$ git clone https://github.com/horeaporutiu/blockchainbean2.git
+```
+2. Navigate to the `web-app` directory:
+```
+HoreaPorutiu$ cd blockchainbean2/web-app
+```
 
-All documents that were used in the supply chain are available online, and can be found by clicking the
-`view the blockchain` button at https://www.ibm.com/blockchainbean. 
 
-In this Code Pattern we will create a blockchain app that increases visibility and efficiency in the supply chain of a coffee retailer. The private keys and credentials of the blockchain application will be stored on a Cloudant database. We will use different transactions to show different possible actions for the different participants in the supply chain. This sample application will record all transactions on the IBM Blockchain Starter Plan, and enable a coffee retailer to ensure the customer that their coffee is organic and fair-trade. The Code Pattern can be useful to developers that are looking into learning more about creating applications that mimic a food trust supply chain with Hyperledger Composer.
+3. Install required dependencies using NPM:
+```
+web-app$ npm install
+```
 
-When the reader has completed this Code Pattern, they will understand how to:
+4. Right-click under your folders in your workspace area and then click *Add Folder to Workspace* and then highlight the 
+`blockchainbean/lib` directory as shown in the picture below, and then click on *add*:
 
-* Interact with IBM Blockchain Starter Plan
-* Build a blockchain back-end using Hyperledger Composer
-* Create and use Cloudant NoSQL Database
-* Deploy a Cloud Foundry application that writes and queries to the ledger
+ ![packageFile](/docs/addSmartContract.png)
 
-<!--Remember to dump an image in this path-->
-![Architecture](/docs/app-architecture.png)
+
+
+
+
+
 
 ## Flow
 1. The user deploys the app in IBM Cloud. The user submits transactions.
