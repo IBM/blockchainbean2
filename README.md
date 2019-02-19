@@ -199,7 +199,10 @@ blockchainbean2$ cd web-app
 web-app$ npm start
 ```
 
-In your browser, go to http://localhost:3000/explorer/
+In your browser, go to http://localhost:3000/explorer/ If all goes well, you should 
+see something like the picture below:
+![packageFile](/docs/loopback.png)
+
 
 and click on `GrowerController`. You should see the Controller expand with the GET/POST methods.
 Click on the green `POST/Grower` button and then `Try it out` to the right of the `POST/Grower` button.
@@ -226,6 +229,20 @@ Then click the blue `Execute` button under the request body. If all goes well, y
 the image below:
 
 ![packageFile](/docs/grower.png)
+
+Great. We have made our first update to the ledger. To make sure things are actually updated,
+go ahead and run the query script again: 
+
+ ```
+web-app$ node query.js
+```
+
+You should see the ledger to be as follows: 
+
+![packageFile](/docs/update.png)
+
+Nice! We made our first update to the ledger. While we're here, let's keep it going! 
+
 
 
 
