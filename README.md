@@ -2,29 +2,42 @@
 
 # Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform 2.0 Beta
 
-## Run the app locally
-1. Git clone this repo onto your computer in the destination of your choice, then go into the web-app folder:
+# Steps (Local Deployment)
+
+1. [Clone the Repo](#step-1-clone-the-repo)
+2. [Install Dependencies](#step-2-install-dependencies)
+3. [Package Contract](#step-3-package-contract)
+4. [Install Contract](#step-4-install-contract)
+5. [Instantiate Contract](#step-5-Instantiate-contract)
+
+## Step 1. Clone the Repo
+
+Git clone this repo onto your computer in the destination of your choice, then go into the web-app folder:
 ```
 HoreaPorutiu$ git clone https://github.com/horeaporutiu/blockchainbean2.git
 ```
-2. Navigate to the `web-app` directory:
+Navigate to the `web-app` directory:
 ```
 HoreaPorutiu$ cd blockchainbean2/web-app
 ```
 
+## Step 2. Install Dependencies
 
-3. Install required dependencies using NPM:
+2. Install required dependencies using NPM:
 ```
 web-app$ npm install
 ```
 
+## Step 3. Package Contract
+
+
 ![packageFile](/docs/rightClick.png)
-4. Right-click under your folders in your workspace area and then click *Add Folder to Workspace* and then highlight the 
+Right-click under your folders in your workspace area and then click *Add Folder to Workspace* and then highlight the 
 `blockchainbean/lib` directory as shown in the picture below, and then click on *add*:
 
 ![packageFile](/docs/addSmartContract.png)
 
- 5. Next, we have to package the smart contract. Click on the *F1* button on your keyboard,
+ Next, we have to package the smart contract. Click on the *F1* button on your keyboard,
  which will bring up the VSCode command pallete. From there, navigate and click on `Package a Smart Contract Project`.
 ![packageFile](/docs/pack.png)
 
@@ -44,6 +57,8 @@ web-app$ npm install
  Note that this `.cds` file is extremely important if we want to run 
  our smart contract on the cloud. 
 
+## Step 4. Install Contract
+
  6. Next, it's time to install and instantiate our contract on the peer. First click on the blockchain icon in the 
  left side of VSCode. Once you click it, you should see `Smart Contract Packages` and the blockchainbean2@0.0.1 package 
  there. In my picture I have other contracts there as well.
@@ -58,6 +73,7 @@ web-app$ npm install
 
  7. Now, let's click on *+ Install* and choose the peer that is available. Then the extension will ask you which package to 
  install. Choose *blockchainbean2@0.0.1* as shown in the picture.
+ 
 ![packageFile](/docs/choosePackage.png)
 
  
@@ -67,8 +83,8 @@ web-app$ npm install
 ![packageFile](/docs/successInstall.png)
 
 
-
- 8. Next, it's time to instantiate. You guessed it.
+## Step 4. Instantiate Contract
+You guessed it. Next, it's time to instantiate. 
  
   Click on *+ Instantiate* 
 
@@ -79,12 +95,9 @@ and then choose
 
 ![packageFile](/docs/channel.png)
 
-
- 
-
   Next, the extension will ask you 
  to choose a smart contract and version to instantiate. Click on *blockchainbean2@0.0.1*.
- ![packageFile](/docs/version.png)
+![packageFile](/docs/version.png)
 
 
  Next, for the optional function, type in *init*.
@@ -93,7 +106,7 @@ and then choose
 
   Leave the arguments blank, and hit *enter* 
  on your keyboard. 
- ![packageFile](/docs/blank.png)
+![packageFile](/docs/blank.png)
 
 
  
@@ -109,7 +122,6 @@ and then choose
  ```
 blockchainbean2$ cd web-app
 web-app$ node query.js
-
 ```
 Your output should be the following:
 
