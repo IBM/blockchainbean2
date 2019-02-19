@@ -18,6 +18,7 @@ HoreaPorutiu$ cd blockchainbean2/web-app
 web-app$ npm install
 ```
 
+ ![packageFile](/docs/rightClick.png)
 4. Right-click under your folders in your workspace area and then click *Add Folder to Workspace* and then highlight the 
 `blockchainbean/lib` directory as shown in the picture below, and then click on *add*:
 
