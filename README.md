@@ -19,10 +19,10 @@ In this Code Pattern we will create a blockchain app that increases visibility a
 
 When the reader has completed this Code Pattern, they will understand how to:
 
-Interact with the (free) IBM Blockchain Platform V2 Beta
-Build a blockchain back-end using Hyperledger Fabric
-Create and use a (free) Kubernetes Cluster
-Deploy a Node.js app in the cloud that will interact with our smart contract
+* Interact with the (free) IBM Blockchain Platform V2 Beta
+* Build a blockchain back-end using Hyperledger Fabric
+* Create and use a (free) Kubernetes Cluster
+* Deploy a Node.js app in the cloud that will interact with our smart contract
 
 ## Requirements
 
