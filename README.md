@@ -9,6 +9,9 @@
 3. [Package Contract](#step-3-package-contract)
 4. [Install Contract](#step-4-install-contract)
 5. [Instantiate Contract](#step-5-Instantiate-contract)
+6. [Submit Transactions](#step-6-submit-transactions)
+
+# Steps (Cloud Deployment - 🚧⚠️👷🏻‍🛑UNDER CONTRSTRUCTION 🚧⚠️👷🏻‍🛑)
 
 ## Step 1. Clone the Repo
 
@@ -23,7 +26,7 @@ HoreaPorutiu$ cd blockchainbean2/web-app
 
 ## Step 2. Install Dependencies
 
-2. Install required dependencies using NPM:
+Install required dependencies using NPM:
 ```
 web-app$ npm install
 ```
@@ -59,7 +62,7 @@ Right-click under your folders in your workspace area and then click *Add Folder
 
 ## Step 4. Install Contract
 
- 6. Next, it's time to install and instantiate our contract on the peer. First click on the blockchain icon in the 
+ Next, it's time to install and instantiate our contract on the peer. First click on the blockchain icon in the 
  left side of VSCode. Once you click it, you should see `Smart Contract Packages` and the blockchainbean2@0.0.1 package 
  there. In my picture I have other contracts there as well.
 ![packageFile](/docs/blockchainView.png)
@@ -71,7 +74,7 @@ Right-click under your folders in your workspace area and then click *Add Folder
 
 ![packageFile](/docs/contracts.png)
 
- 7. Now, let's click on *+ Install* and choose the peer that is available. Then the extension will ask you which package to 
+ Now, let's click on *+ Install* and choose the peer that is available. Then the extension will ask you which package to 
  install. Choose *blockchainbean2@0.0.1* as shown in the picture.
  
 ![packageFile](/docs/choosePackage.png)
@@ -83,7 +86,7 @@ Right-click under your folders in your workspace area and then click *Add Folder
 ![packageFile](/docs/successInstall.png)
 
 
-## Step 4. Instantiate Contract
+## Step 5. Instantiate Contract
 You guessed it. Next, it's time to instantiate. 
  
   Click on *+ Instantiate* 
@@ -95,7 +98,7 @@ and then choose
 
 ![packageFile](/docs/channel.png)
 
-  Next, the extension will ask you 
+Next, the extension will ask you 
  to choose a smart contract and version to instantiate. Click on *blockchainbean2@0.0.1*.
 ![packageFile](/docs/version.png)
 
@@ -104,19 +107,24 @@ and then choose
 ![packageFile](/docs/function.png)
 
 
-  Leave the arguments blank, and hit *enter* 
+Leave the arguments blank, and hit *enter* 
  on your keyboard. 
 ![packageFile](/docs/blank.png)
 
 
- 
-  This will instantiate the smart contract. You should see the contract 
+ This will instantiate the smart contract. You should see the contract 
  under the *instantiated* tab on the left-hand side, as shown in the picture. 
 
 ![packageFile](/docs/instantiated.png)
 
 
- 9. Nice. We're pretty much ready to submit transactions on our contract. Go ahead and go 
+## Step 6. Submit Transactions
+*** Note that this step is the same whether for local or cloud deployment. The only 
+different is that we will use queries to see the ledger locally, whereas on cloud 
+we can view the ledger via the block explorer on IBM Blockchain Platform ***
+
+
+ Nice. We're pretty much ready to submit transactions on our contract. Go ahead and go 
  into your web-app directory and run the query script with the commands shown below. 
 
  ```
@@ -133,7 +141,7 @@ There is none, since we haven't added anything to the ledger. Ok. Now, let's add
 member to the ledger, the grower. To do this, we will start our web-app and interact with our
 app to submit transactions to the network. 
 
-10. 
+ 
 
 
 
