@@ -75,3 +75,8 @@ typings/
 
 # Serverless directories
 .serverless
+
+# web-app dist folder
+web-app/dist
+
+
