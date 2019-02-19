@@ -119,9 +119,9 @@ Leave the arguments blank, and hit *enter*
 
 
 ## Step 6. Submit Transactions
-*** Note that this step is the same whether for local or cloud deployment. The only 
+*Note that this step is the same whether for local or cloud deployment. The only 
 different is that we will use queries to see the ledger locally, whereas on cloud 
-we can view the ledger via the block explorer on IBM Blockchain Platform ***
+we can view the ledger via the block explorer on IBM Blockchain Platform *
 
 
  Nice. We're pretty much ready to submit transactions on our contract. Go ahead and go 
@@ -140,6 +140,19 @@ All we have done, is queried the ledger for all data.
 There is none, since we haven't added anything to the ledger. Ok. Now, let's add our first 
 member to the ledger, the grower. To do this, we will start our web-app and interact with our
 app to submit transactions to the network. 
+
+### Add Members to the network
+Let's bring up a new terminal window, and in that terminal, go to the blockchainbean2 directory that 
+we cloned earlier, and start the app in that window with the following command.
+
+ ```
+blockchainbean2$ cd web-app
+web-app$ npm start
+```
+
+In your browser, go to 
+
+
 
  
 
