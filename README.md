@@ -150,7 +150,9 @@ blockchainbean2$ cd web-app
 web-app$ npm start
 ```
 
-In your browser, go to 
+In your browser, go to http://localhost:3000/explorer/
+
+and click on `GrowerController`.
 
 
 

@@ -1,0 +1,27 @@
+{
+  "ids": {
+    "Grower": 1224,
+    "Regulator": 1112
+  },
+  "models": {
+    "Grower": {
+      "1": "{\"organization\":\"Take over the galaxy\",\"address\":\"MWAHAHAHAHAHAHAHAHAHAHAHAHAMWAHAHAHAHAHAHAHAHAHAHAHAHA\",\"id\":1}",
+      "2": "{\"organization\":\"destroy alderaan\",\"address\":\"Make sure there are no survivors left!\",\"id\":2}",
+      "3": "{\"organization\":\"terrorize senate\",\"address\":\"Tell them they're getting a budget cut.\",\"id\":3}",
+      "4": "{\"organization\":\"crush rebel scum\",\"address\":\"Every.Last.One.\",\"id\":4}",
+      "5": "{\"id\":5,\"organization\":\"acme\",\"address\":\"4 apple lane\"}",
+      "6": "{\"id\":6,\"organization\":\"string\",\"address\":\"string\"}",
+      "123": "{\"id\":123,\"organization\":\"Ethereum\",\"address\":\"1123 main street\"}",
+      "1223": "{\"id\":1223,\"organization\":\"Ethereum\",\"address\":\"1123 main street\"}"
+    },
+    "Regulator": {
+      "1": "{\"organization\":\"aTake over the galaxy\",\"address\":\"MWAHAHAHAHAHAHAHAHAHAHAHAHAMWAHAHAHAHAHAHAHAHAHAHAHAHA\",\"id\":1}",
+      "2": "{\"organization\":\"adestroy alderaan\",\"address\":\"Make sure there are no survivors left!\",\"id\":2}",
+      "3": "{\"organization\":\"aterrorize senate\",\"address\":\"Tell them they're getting a budget cut.\",\"id\":3}",
+      "4": "{\"organization\":\"acrush rebel scum\",\"address\":\"Every.Last.One.\",\"id\":4}",
+      "5": "{\"id\":5,\"organization\":\"aacme\",\"address\":\"4 apple lane\"}",
+      "12": "{\"id\":12,\"organization\":\"hooreaOrg\",\"address\":\"horeaaddress\"}",
+      "1111": "{\"id\":1111,\"organization\":\"hooreaOrg\",\"address\":\"horeaaddress\"}"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+swagger: "2.0"
+info:
+  description: "A Google Cloud Endpoints API for Hello world."
+  title: "Endpoints - Hello World"
+  version: "1.0.0"
+host: "hello-world.endpoints.PROJECT-ID.cloud.goog"
+# [END add_project]
+basePath: "/"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+schemes:
+- "https"
+paths:
+  "/api":
+    get:
+      description: "Returns the hello world"
+      operationId: "v1"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "hello world info."
+          schema:
+            $ref: "#/definitions/response"
+definitions:
+  response:
+    properties:
+      hello:
+        type: "string"

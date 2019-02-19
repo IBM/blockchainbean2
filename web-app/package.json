@@ -1,0 +1,69 @@
+{
+  "name": "beanclient",
+  "version": "1.0.0",
+  "description": "beanClientLB",
+  "keywords": [
+    "loopback-application",
+    "loopback"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.9"
+  },
+  "scripts": {
+    "build:apidocs": "lb-apidocs",
+    "build": "lb-tsc es2017 --outDir dist",
+    "build:watch": "lb-tsc --watch",
+    "clean": "lb-clean dist",
+    "lint": "npm run prettier:check && npm run tslint",
+    "lint:fix": "npm run tslint:fix && npm run prettier:fix",
+    "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\"",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "tslint": "lb-tslint",
+    "tslint:fix": "npm run tslint -- --fix",
+    "pretest": "npm run clean && npm run build",
+    "test": "lb-mocha --allow-console-logs \"dist/test\"",
+    "posttest": "npm run lint",
+    "test:dev": "lb-mocha --allow-console-logs dist/test/**/*.js && npm run posttest",
+    "migrate": "node ./dist/src/migrate",
+    "prestart": "npm run build",
+    "start": "node .",
+    "debug": "node --inspect .",
+    "debug-brk": "node --inspect-brk .",
+    "prepublishOnly": "npm run test"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "",
+  "files": [
+    "README.md",
+    "index.js",
+    "index.d.ts",
+    "dist/src",
+    "dist/index*",
+    "src"
+  ],
+  "dependencies": {
+    "@loopback/boot": "^1.0.11",
+    "@loopback/context": "^1.5.0",
+    "@loopback/core": "^1.1.5",
+    "@loopback/openapi-v3": "^1.2.0",
+    "@loopback/repository": "^1.1.4",
+    "@loopback/rest": "^1.5.4",
+    "@loopback/rest-explorer": "^1.1.7",
+    "@loopback/service-proxy": "^1.0.7",
+    "memory": "0.0.3"
+  },
+  "devDependencies": {
+    "@loopback/build": "^1.2.1",
+    "@loopback/testlab": "^1.0.5",
+    "@loopback/tslint-config": "^2.0.0",
+    "@types/node": "^10.11.2",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2",
+    "fabric-network": "^1.4.0"
+  }
+}
