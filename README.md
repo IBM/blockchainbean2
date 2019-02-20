@@ -2,10 +2,9 @@
 
 # Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform 2.0 Beta
 
-This code pattern is based on a recent proof-of-concept developed in collaboration with a coffee roasting company that was nice enough to let us use their supply-chain documents. The link to the application that the code pattern is based off of is here: https://www.ibm.com/thought-leadership/blockchainbean/
+This code pattern is based on a recent proof-of-concept developed in collaboration with a coffee roasting company that was nice enough to let us use their supply-chain documents. The finished product of this code pattern is a cloud-based blockchain API, that any other UI app can call. An example UI app that leverages our blockchain API can be found [here](https://www.ibm.com/thought-leadership/blockchainbean/).
 
-The finished product has a UI that interacts with our blockchain client app (in the 
-form of a Loopback API) which allows you to query for cups of coffee that are poured. 
+
 Each cup has a history based on which batch of coffee was used make the cup, which you 
 can see below. Additionally, you can see other details such as who poured the cup, 
 at what time the cup was poured, which type of beans were used, etc. on the [your cup](https://www.ibm.com/thought-leadership/blockchainbean/yourcup/index.html)
