@@ -252,6 +252,86 @@ You should see the ledger to be as follows:
 
 Nice! We made our first update to the ledger. While we're here, let's keep it going! 
 
+Add the trader - go to `/POST/Trader` and then follow the same steps as above,
+except add in the following json:
+
+```
+{
+  "$class": "org.ibm.coffee.Trader",
+  "traderId": "Trader-0791",
+  "organization": "Royal Coffee New York",
+  "address": {
+    "$class": "org.ibm.coffee.Address",
+    "city": "South Plainfield",
+    "country": "USA",
+    
+  }
+}
+```
+
+Same thing with the shipper now:
+
+```
+{
+  "$class": "org.ibm.coffee.Shipper",
+  "shipperId": "Maersk",
+  "organization": "A.P. Moller–Maersk Group",
+  "address": {
+    "$class": "org.ibm.coffee.Address",
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "street": "N/A",
+    "zip": "N/A"
+  }
+}
+```
+
+And the retailer: 
+```
+{
+  "$class": "org.ibm.coffee.Retailer",
+  "retailerId": "BrooklynRoasting",
+  "organization": "Brooklyn Roasting Company",
+  "address": {
+    "$class": "org.ibm.coffee.Address",
+    "city": "Brooklyn",
+    "country": "USA",
+    "street": "25 Jay St",
+    "zip": "11201"
+  }
+}
+```
+
+And last but not least, the regulator :) 
+
+```
+{
+  "$class": "org.ibm.coffee.Regulator",
+  "regulatorId": "ICO",
+  "organization": "International Coffee Organization",
+  "address": {
+    "$class": "org.ibm.coffee.Address",
+    "city": "London",
+    "country": "England",
+    "street": "22 Berners Street",
+    "zip": "N/A"
+  }
+}
+```
+
+Now if we run our usual `node query` we should get the following output 
+i.e. all of the members we just added.
+
+```
+Submit hello world transaction.
+"[{\"Key\":\"BrooklynRoasting\",\"Record\":{\"address\":\"25 Jay St Brooklyn 11201 USA\",\"id\":\"BrooklynRoasting\",\"memberType\":\"retailer\",\"organization\":\"Brooklyn Roasting Company\"}},{\"Key\":\"Grower-0201\",\"Record\":{\"address\":\"N/A Gedeb N/A Ethiopia\",\"id\":\"Grower-0201\",\"memberType\":\"grower\",\"organization\":\"Ethiopia Gedeb 1 Banko Gotiti GrainPro\"}},{\"Key\":\"ICO\",\"Record\":{\"address\":\"22 Berners Street London N/A England\",\"id\":\"ICO\",\"memberType\":\"regulator\",\"organization\":\"International Coffee Organization\"}},{\"Key\":\"Maersk\",\"Record\":{\"address\":\"N/A Copenhagen N/A Denmark\",\"id\":\"Maersk\",\"memberType\":\"shipper\",\"organization\":\"A.P. Moller–Maersk Group\"}},{\"Key\":\"Trader-0791\",\"Record\":{\"address\":\"661 Hadley Rd South Plainfield 07080 USA\",\"id\":\"Trader-0791\",\"memberType\":\"trader\",\"organization\":\"Royal Coffee New York\"}}]"
+Disconnect from Fabric gateway.
+```
+
+Nice. Let's add some coffee on our chain. That's what the whole point of this was, 
+right?
+
+### Add Coffee to the network
 
 
 
