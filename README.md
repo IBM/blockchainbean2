@@ -333,6 +333,210 @@ right?
 
 ### Add Coffee to the network
 
+Let's do a `/POST/addCoffee` with the following request body:
+
+```
+{
+  "size": "LARGE",
+  "roast": "DARK",
+  "batchState": "READY_FOR_DISTRIBUTION",
+  "grower": "Grower-0201",
+  "transactionId": "txId",
+  "timestamp": "4:17PM, Feb 19. 2019"
+}
+```
+
+Great. At this point, we have a batch of coffee (around 100KG) or so, that 
+we are ready to ship across the ocean. But first, we have to upload data from
+documents that verify that we are in paying a `fair-trade` price for our coffee.
+
+To do this, we must reference the batchId of coffee we have just created. 
+The application randomly assigns a batchId each time we call /POST/addCoffee.
+
+Let's run our query to get our batchId:
+
+ ```
+web-app$ node query.js
+```
+
+My response (edited) is the following: 
+
+```
+{\"Key\":\"hz4dzq6ilk\",\"Record\":{\"batchId\":\"hz4dzq6ilk\",\"batchState\":\"READY_FOR_DISTRIBUTION\",\"grower\":\"Grower-0201\",\"roast\":\"DARK\",\"size\":\"LARGE\",\"timestamp\":\"Tue Feb 19 2019\",\"transactionId\":\"txId\"}}]"
+```
+
+From there, I can see my batchId is `hz4dzq6ilk`. We will need this later on.
+
+### Add Supply Chain Data to the Network
+
+Cool. Let's update our fair trade data. Got to `/POST/submitFairTradeData` 
+and submit a transaction with the following JSON. 🛑IMPORTANT - you must 
+use your own batchId for this to work!! 🛑 (I will keep using this one
+`hz4dzq6ilk` but yours will be different!)
+
+Note - we are playing the part of the buyer of the coffee now - in a real-life 
+network, I would have to authenticate (with API KEY, or some other security 
+mechanism) that I am the buyer of the coffee, and that these reports are for the 
+coffee I bought. Let's update the fair trade data from the point of view of the buyer.
+
+```
+{
+  "reportName": "Fair Trade Coffee Supply Chain Report",
+  "organizationDescription": "YCFCU is an Ethiopian coffee producing, processing, and exporting cooperative union founded in 2002. YCFCU represents 23 base level cooperatives, all located in the Gedeo Zone, within the Southern NationsNationalities and Peope (SNNPR) ethnically-based region of Ethiopia. Given that its members depend on coffee as their sole source of income, YCFCU aims to maximize financial returns to its members through its linkages with international markets.",
+  "reportYear": "2016",
+  "fairtradePremiumInvested": "$182273",
+  "investmentTitle1": "School Classroom Addition",
+  "investmentAmount1": "$30,626",
+  "investmentTitle2": "Road Infrastructure",
+  "investmentAmount2": "$43,251",
+  "investmentTitle3": "Food Security",
+  "investmentAmount3": "$34,411",
+  "batchId": "hz4dzq6ilk",
+  "transactionId": "7bde4711554a69ff336551b4acbb465648355cbf2b80f6218d3cee59593fe3b3",
+  "timestamp": "2018-07-18T02:08:54.365Z"
+}
+```
+
+Next, let's play the part of the shipper. In a live network the shipper 
+would authenticate into the network, and would be allow to /POST (update) 
+the ledger with the packing list controller. 
+
+Let's do a /POST/SubmitPackingListController with the following json,
+but don't forget to use ***YOUR OWN batchId*** :) :
+
+```
+{
+  "grower": "resource:org.ibm.coffee.Grower#Grower-0201",
+  "trader": "resource:org.ibm.coffee.Trader#Trader-0791",
+  "PL_Invoice_no": "0067",
+  "PL_IssueDate": "2017-09-19T00:00:00.000Z",
+  "PL_ICO_no": "010/0150/0128",
+  "PL_ICO_Lot": "Lot 7",
+  "PL_FDA_NO": "15752850924",
+  "PL_Bill_of_Lading_No": "961972237",
+  "PL_LoadedVessel": "NorthernMagnum",
+  "PL_VesselVoyage_No": "1707",
+  "PL_Container_No": "redacted",
+  "PL_Seal_no": "ML-Dj0144535 20 DRY 8’6",
+  "PL_timestamp": "2018-06-17",
+  "batchId": "hz4dzq6ilk",
+  "transactionId": "2e3dfb77486cf5ad731777614741fd68c7adea8d87a103bd03e7296f46f87b82",
+  "timestamp": "2018-07-19T21:55:41.859Z"
+}
+```
+
+Now, if we query our batch of coffee by its id, we can see the fair trade and shipping
+data associated with it. To do this, simply open your `query.js` file and change 
+the following line:
+
+```
+let response = await contract.evaluateTransaction('queryAll');
+```
+
+to this (but input your own batchId :) :
+
+```
+let response = await contract.evaluateTransaction('query', 'hz4dzq6ilk');
+```
+
+Then run the query:
+
+```
+web-app$ node query.js
+```
+
+The response should be as follows: 
+
+```
+
+Submit hello world transaction.
+"{\"PL_Bill_of_Lading_No\":\"961972237\",\"PL_Container_No\":\"redacted\",\"PL_FDA_NO\":\"15752850924\",\"PL_ICO_Lot\":\"Lot 7\",\"PL_ICO_no\":\"010/0150/0128\",\"PL_Invoice_no\":\"0067\",\"PL_IssueDate\":\"2017-09-19T00:00:00.000Z\",\"PL_LoadedVessel\":\"NorthernMagnum\",\"PL_Seal_no\":\"ML-Dj0144535 20 DRY 8’6\",\"PL_VesselVoyage_No\":\"1707\",\"PL_timestamp\":\"2018-06-17\",\"batchId\":\"hz4dzq6ilk\",\"batchState\":\"READY_FOR_DISTRIBUTION\",\"fairTradePremiumInvested\":\"$182273\",\"grower\":\"resource:org.ibm.coffee.Grower#Grower-0201\",\"investmentAmount1\":\"$30,626\",\"investmentAmount2\":\"Road Infrastructure\",\"investmentAmount3\":\"Food Security\",\"investmentTitle1\":\"School Classroom Addition\",\"investmentTitle2\":\"$43,251\",\"investmentTitle3\":\"$34,411\",\"orgDescription\":\"YCFCU is an Ethiopian coffee producing, processing, and exporting cooperative union founded in 2002. YCFCU represents 23 base level cooperatives, all located in the Gedeo Zone, within the Southern NationsNationalities and Peope (SNNPR) ethnically-based region of Ethiopia. Given that its members depend on coffee as their sole source of income, YCFCU aims to maximize financial returns to its members through its linkages with international markets.\",\"reportName\":\"Fair Trade Coffee Supply Chain Report\",\"reportYear\":\"2016\",\"roast\":\"DARK\",\"size\":\"LARGE\",\"timestamp\":\"2018-07-19T21:55:41.859Z\",\"trader\":\"resource:org.ibm.coffee.Trader#Trader-0791\",\"transactionId\":\"2e3dfb77486cf5ad731777614741fd68c7adea8d87a103bd03e7296f46f87b82\"}"
+```
+
+Note that here we are getting all data that is assocaited with our batchId. I.e.
+on our ledger, we keep updating the key `hz4dzq6ilk` with more and more data. So 
+that the value of our key keeps expanding with more supply chain data. At the 
+end of our app, we can then parse our the important data. 
+
+Ok. Enough talk. More data.
+
+Let's submit a transaction that represents the port authority receiving the shipment
+after reaching its destination. 
+
+Go to /POST/SubmitInboundWeightTallyController and paste the following JSON, except 
+with your own batchId:
+
+```
+{
+  "dateStripped": "2017-10-06T00:00:00.000Z",
+  "marks": "010/0150/0128 Lot 7",
+  "bagsExpected": "150",
+  "condition": "good",
+  "insectActivity": "none",
+  "batchId": "hz4dzq6ilk",
+  "transactionId": "cdcf476897109c6470e476eac2b90c05c223e64681311b2fabbb175f26ac8c8b",
+  "timestamp": "2018-07-18T02:10:29.097Z"
+}
+```
+
+Lastly, let's update our cupping data. Go to /POST/SubmitCuppingController 
+and add the following json. Change your batchId. Please.
+
+```
+{
+  "dateStripped": "2017-10-06T00:00:00.000Z",
+  "marks": "010/0150/0128 Lot 7",
+  "bagsExpected": "150",
+  "condition": "good",
+  "insectActivity": "none",
+  "batchId": "hz4dzq6ilk",
+  "transactionId": "cdcf476897109c6470e476eac2b90c05c223e64681311b2fabbb175f26ac8c8b",
+  "timestamp": "2018-07-18T02:10:29.097Z"
+}
+```
+
+Let's query one last time, to make sure we have everything we need. Query 
+for the particular batchId as before:
+
+ ```
+web-app$ node query.js
+```
+
+The response:
+
+```
+
+"{\"PL_Bill_of_Lading_No\":\"961972237\",\"PL_Container_No\":\"redacted\",
+\"PL_FDA_NO\":\"15752850924\",\"PL_ICO_Lot\":\"Lot 7\",\"PL_ICO_no\":\"010/0150/0128\",
+\"PL_Invoice_no\":\"0067\",\"PL_IssueDate\":\"2017-09-19T00:00:00.000Z\",
+\"PL_LoadedVessel\":\"NorthernMagnum\",\"PL_Seal_no\":\"ML-Dj0144535 20 DRY 8’6\",
+\"PL_VesselVoyage_No\":\"1707\",\"PL_timestamp\":\"2018-06-17\",\"acidity\":\"8\",
+\"afterTaste\":\"8\",\"aroma\":\"9\",\"bagsExpected\":\"150\",
+\"batchId\":\"hz4dzq6ilk\",\"batchState\":\"READY_FOR_DISTRIBUTION\",\"body\":\"9\",
+\"condition\":\"good\",\"cupper\":\"Brian\",
+\"dateStripped\":\"2017-10-06T00:00:00.000Z\",\"fairTradePremiumInvested\":\"$182273\",
+\"finalScore\":\"89\",\"flavor\":\"8\",
+\"grower\":\"resource:org.ibm.coffee.Grower#Grower-0201\",\"insectActivity\":\"none\",
+\"investmentAmount1\":\"$30,626\",\"investmentAmount2\":\"Road Infrastructure\",
+\"investmentAmount3\":\"Food Security\",\"investmentTitle1\":\"School Classroom 
+Addition\",\"investmentTitle2\":\"$43,251\",\"investmentTitle3\":\"$34,411\",
+\"marks\":\"010/0150/0128 Lot 7\",\"orgDescription\":\"YCFCU is an Ethiopian coffee 
+producing, processing, and exporting cooperative union founded in 2002. YCFCU 
+represents 23 base level cooperatives, all located in the Gedeo Zone, within the 
+Southern NationsNationalities and Peope (SNNPR) ethnically-based region of Ethiopia. 
+Given that its members depend on coffee as their sole source of income, YCFCU aims to 
+maximize financial returns to its members through its linkages with international 
+markets.\",\"reportName\":\"Fair Trade Coffee Supply Chain Report\",
+\"reportYear\":\"2016\",\"roast\":\"DARK\",\"size\":\"LARGE\",\"timestamp\":\"Tue Feb 
+19 2019\",\"trader\":\"resource:org.ibm.coffee.Trader#Trader-0791\",
+\"transactionId\":\"cdcf476897109c6470e476eac2b90c05c223e64681311b2fabbb175f26ac8c8b\"}"
+```
+
+
+Cool. That's it! All the transactions are in the chain and now we can focus on 
+querying. Good job :) You are officialy a blockchain monster now! 
+
+
 
 
 
