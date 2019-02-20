@@ -544,10 +544,44 @@ and enter the following json:
 }
 ```
 
-Cool. That's it! All the transactions are in the chain and now we can focus on 
-querying. Good job :) You are officialy a blockchain monster now! 
+So that's pretty much it! Now when we add this data to the chain, our web-app 
+can then query for this cupId (NJB123) and return the following data.
 
-//Add /pourCup
+I.e. in your `query.js` now query for the cupId by changing the following line
+```
+let response = await contract.evaluateTransaction('queryAll');
+```
+
+to this (but input your own batchId :) :
+
+```
+let response = await contract.evaluateTransaction('query', 'NJB123');
+```
+
+Then run the query:
+
+```
+web-app$ node query.js
+```
+
+You should get the following output:
+
+```
+
+"{\"barista\":\"Siv\",\"batchId\":\"hz4dzq6ilk\",\"beanType\":\"Ethiopian Natural Yirgacheffe\",
+\"class\":\"org.ibm.coffee.pourCup\",\"cupId\":\"NJB123\",\"drinkType\":\"Nitro\",\"lastPour\":\"Wed Feb 20 2019 22:18:46 GMT+0000 
+(UTC)\",\"transactionId\":\"cdcf476897109c6470e476eac2b90c05c223e64681311b2fabbb175f26ac8c8b\"}"
+```
+
+Cool. That's it! You've now added a cup of coffee on the blockchain, and referenced it to 
+our batch (hz4dzq6ilk) so that you can get all the relevant supply chain info on the 
+batch of coffee that was used to pour the cup! Woo!!
+
+All the transactions are in the chain and now we can focus on 
+querying. Good job :) You are officially a blockchain monster now! 
+
+
+
 
 
 
