@@ -534,7 +534,7 @@ markets.\",\"reportName\":\"Fair Trade Coffee Supply Chain Report\",
 
 Ok. So now that we have all the supply chain data loaded up for our batch, it's 
 time to use this batch to pour cups of coffee! Go to the */POST/pourCupController*
-and enter the following json:
+and enter the following json *but replace the batchId with your own*:
 
 ```
 {
