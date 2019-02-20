@@ -457,7 +457,7 @@ Submit hello world transaction.
 Note that here we are getting all data that is assocaited with our batchId. I.e.
 on our ledger, we keep updating the key `hz4dzq6ilk` with more and more data. So 
 that the value of our key keeps expanding with more supply chain data. At the 
-end of our app, we can then parse our the important data. 
+end of our app, we can then query and parse the important data as we wish. 
 
 Ok. Enough talk. More data.
 
