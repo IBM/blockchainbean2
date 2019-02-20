@@ -8,7 +8,8 @@ The finished product has a UI that interacts with our blockchain client app (in 
 form of a Loopback API) which allows you to query for cups of coffee that are poured. 
 Each cup has a history based on which batch of coffee was used make the cup, which you 
 can see below. Additionally, you can see other details such as who poured the cup, 
-at what time the cup was poured, which type of beans were used, etc.
+at what time the cup was poured, which type of beans were used, etc. on the [your cup](https://www.ibm.com/thought-leadership/blockchainbean/yourcup/index.html)
+page. 
 
 ![packageFile](/docs/bean.png)
 
