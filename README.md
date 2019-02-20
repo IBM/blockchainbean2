@@ -9,7 +9,7 @@ form of a Loopback API) which allows you to query for cups of coffee that are po
 Each cup has a history based on which batch of coffee was used make the cup, which you 
 can see below. Additionally, you can see other details such as who poured the cup, 
 at what time the cup was poured, which type of beans were used, etc. on the [your cup](https://www.ibm.com/thought-leadership/blockchainbean/yourcup/index.html)
-page. 
+page. Hint, try cupId 'NJB123' for the result shown below.
 
 ![packageFile](/docs/bean.png)
 
