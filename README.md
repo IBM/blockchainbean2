@@ -533,6 +533,17 @@ markets.\",\"reportName\":\"Fair Trade Coffee Supply Chain Report\",
 \"transactionId\":\"cdcf476897109c6470e476eac2b90c05c223e64681311b2fabbb175f26ac8c8b\"}"
 ```
 
+Ok. So now that we have all the supply chain data loaded up for our batch, it's 
+time to use this batch to pour cups of coffee! Go to the */POST/pourCupController*
+and enter the following json:
+
+```
+{
+  "cupId": "NJB123",
+  "batchId": "hz4dzq6ilk",
+  "transactionId": "cdcf476897109c6470e476eac2b90c05c223e64681311b2fabbb175f26ac8c8b"
+}
+```
 
 Cool. That's it! All the transactions are in the chain and now we can focus on 
 querying. Good job :) You are officialy a blockchain monster now! 
