@@ -77,7 +77,7 @@ export module BlockChainModule {
       // let str = 'query'
       // let response = await keyPassed.contract.submitTransaction('query', 'arg1', 'arg2');
 
-      let response = await contract.submitTransaction('query', keyPassed);
+      let response = await contract.evaluateTransaction('query', keyPassed);
       console.log('query by key response: ')
       console.log(JSON.parse(response.toString()))
       console.log(response.length)
@@ -101,7 +101,7 @@ export module BlockChainModule {
       // let str = 'query'
       // let response = await keyPassed.contract.submitTransaction('query', 'arg1', 'arg2');
 
-      let response = await keyPassed.contract.submitTransaction('query', keyPassed.id);
+      let response = await keyPassed.contract.evaluateTransaction('query', keyPassed.id);
       console.log('query by key response: ')
       console.log(JSON.parse(response.toString()))
       console.log(response.length)
