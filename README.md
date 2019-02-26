@@ -263,8 +263,7 @@ except add in the following json:
   "address": {
     "$class": "org.ibm.coffee.Address",
     "city": "South Plainfield",
-    "country": "USA",
-    
+    "country": "USA"
   }
 }
 ```
