@@ -193,7 +193,12 @@ Your output should be the following:
 
 ![packageFile](/docs/queryScript.png)
 
-
+⚠️ if you get a grpc error run:
+```sh
+web-app$ npm rebuild
+web-app$ node query.js
+``` 
+and 
 All we have done, is queried the ledger for all data. 
 There is none, since we haven't added anything to the ledger. Ok. Now, let's add our first 
 member to the ledger, the grower. To do this, we will start our web-app and interact with our
