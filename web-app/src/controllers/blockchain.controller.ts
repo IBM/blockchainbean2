@@ -31,4 +31,23 @@ export class BlockchainController {
     var rez = JSON.parse(result.toString());
     return rez
   }
+
+
+  @operation('get', '/blockchain/{key}', {
+    responses: {
+      '200': {
+        description: 'Blockchain',
+        content: { 'application/text': { schema: { 'x-ts-type': String } } },
+      },
+    },
+  })
+  async getPartByKey(@param({ name: 'key', in: 'path' }) key: string): Promise<String> {
+    let networkObj = await blockchainClient.connectToNetwork();
+
+    let result = await blockchainClient.queryByKey2(networkObj.contract, key);
+    var rez = JSON.parse(result.toString());
+    return rez
+  }
+
+
 }

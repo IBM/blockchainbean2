@@ -72,6 +72,24 @@ export module BlockChainModule {
 
 
 
+    async queryByKey2(contract: any, keyPassed: any) {
+
+      // let str = 'query'
+      // let response = await keyPassed.contract.submitTransaction('query', 'arg1', 'arg2');
+
+      let response = await contract.submitTransaction('query', keyPassed);
+      console.log('query by key response: ')
+      console.log(JSON.parse(response.toString()))
+      console.log(response.length)
+      if (response.length === 2) {
+        response = `${keyPassed} does not exist`;
+        return response;
+      }
+      response = JSON.parse(response.toString());
+      return response;
+
+    }
+
     async queryAll(contract: any) {
       let response = await contract.evaluateTransaction('queryAll');
       console.log(response.toString())
