@@ -193,7 +193,12 @@ Your output should be the following:
 
 ![packageFile](/docs/queryScript.png)
 
-
+⚠️ if you get a grpc error run:
+```sh
+web-app$ npm rebuild
+web-app$ node query.js
+``` 
+and 
 All we have done, is queried the ledger for all data. 
 There is none, since we haven't added anything to the ledger. Ok. Now, let's add our first 
 member to the ledger, the grower. To do this, we will start our web-app and interact with our
@@ -483,6 +488,13 @@ and add the following json. Change your batchId. Please.
 
 ```
 {
+  "cupper":"cupperX",
+  "aroma":"Candy-like",
+  "flavor":"citrus",
+  "afterTaste":"rich",
+  "acidity":"zesty",
+  "body":"balanced",
+  "finalScore":"great",
   "dateStripped": "2017-10-06T00:00:00.000Z",
   "marks": "010/0150/0128 Lot 7",
   "bagsExpected": "150",
@@ -492,6 +504,8 @@ and add the following json. Change your batchId. Please.
   "transactionId": "cdcf476897109c6470e476eac2b90c05c223e64681311b2fabbb175f26ac8c8b",
   "timestamp": "2018-07-18T02:10:29.097Z"
 }
+
+
 ```
 
 Let's query one last time, to make sure we have everything we need. Query 

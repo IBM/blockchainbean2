@@ -64,12 +64,37 @@ export module BlockChainModule {
       //call addMember smart contract function
       //$TODO: dynamically call submitTransaction
       let response = await args.contract.submitTransaction(args.function,
-          args.id, args.organization, args.address, args.memberType );
+        args.id, args.organization, args.address, args.memberType);
       return response;
-            
+
 
     }
 
+
+
+    async queryByKey2(contract: any, keyPassed: any) {
+
+      // let str = 'query'
+      // let response = await keyPassed.contract.submitTransaction('query', 'arg1', 'arg2');
+
+      let response = await contract.submitTransaction('query', keyPassed);
+      console.log('query by key response: ')
+      console.log(JSON.parse(response.toString()))
+      console.log(response.length)
+      if (response.length === 2) {
+        response = `${keyPassed} does not exist`;
+        return response;
+      }
+      response = JSON.parse(response.toString());
+      return response;
+
+    }
+
+    async queryAll(contract: any) {
+      let response = await contract.evaluateTransaction('queryAll');
+      console.log(response.toString())
+      return response;
+    }
 
     async queryByKey(keyPassed: any) {
 
@@ -96,8 +121,8 @@ export module BlockChainModule {
       let response = await args.contract.submitTransaction(args.function,
         args.reportName, args.orgDescription, args.reportYear, args.fairTradePremiumInvested,
         args.investmentTitle1, args.investmentAmount1, args.investmentAmount2, args.investmentTitle2,
-        args.investmentAmount3, args.investmentTitle3, args.batchId, args.transactionId, args.timestamp  );
-    return response;
+        args.investmentAmount3, args.investmentTitle3, args.batchId, args.transactionId, args.timestamp);
+      return response;
 
     }
 
@@ -108,8 +133,8 @@ export module BlockChainModule {
       let response = await args.contract.submitTransaction(args.function,
         args.cupper, args.aroma, args.flavor, args.afterTaste,
         args.acidity, args.body, args.finalScore, args.batchId,
-        args.transactionId, args.timestamp );
-    return response;
+        args.transactionId, args.timestamp);
+      return response;
 
     }
 
@@ -121,8 +146,8 @@ export module BlockChainModule {
         args.grower, args.trader, args.PL_Invoice_no, args.PL_IssueDate,
         args.PL_ICO_no, args.PL_ICO_Lot, args.PL_FDA_NO,
         args.PL_Bill_of_Lading_No, args.PL_LoadedVessel, args.PL_VesselVoyage_No,
-        args.PL_Container_No, args.PL_Seal_no, args.PL_timestamp, args.batchId, 
-        args.transactionId, args.timestamp 
+        args.PL_Container_No, args.PL_Seal_no, args.PL_timestamp, args.batchId,
+        args.transactionId, args.timestamp
       );
 
       return response;
@@ -135,7 +160,7 @@ export module BlockChainModule {
 
       let response = await args.contract.submitTransaction(args.function,
         args.dateStripped, args.marks, args.bagsExpected, args.condition,
-        args.insectActivity, args.batchId, args.transactionId, args.timestamp 
+        args.insectActivity, args.batchId, args.transactionId, args.timestamp
       );
 
       return response;
@@ -148,7 +173,7 @@ export module BlockChainModule {
 
       let response = await args.contract.submitTransaction(args.function,
         args.size, args.roast, args.batchState, args.grower,
-         args.transactionId, args.timestamp 
+        args.transactionId, args.timestamp
       );
 
       return response;
