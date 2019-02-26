@@ -86,7 +86,7 @@ HoreaPorutiu$ cd blockchainbean2/web-app
 
 Install required dependencies using NPM:
 ```
-web-app$ npm install
+web-app$ npm install --ignore-scripts
 ```
 
 ## Step 3. Package Contract
