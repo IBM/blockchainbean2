@@ -488,24 +488,17 @@ and add the following json. Change your batchId. Please.
 
 ```
 {
-  "cupper":"cupperX",
-  "aroma":"Candy-like",
-  "flavor":"citrus",
-  "afterTaste":"rich",
-  "acidity":"zesty",
-  "body":"balanced",
-  "finalScore":"great",
-  "dateStripped": "2017-10-06T00:00:00.000Z",
-  "marks": "010/0150/0128 Lot 7",
-  "bagsExpected": "150",
-  "condition": "good",
-  "insectActivity": "none",
+  "cupper":"Brian",
+  "aroma":"9",
+  "flavor":"8",
+  "afterTaste":"8",
+  "acidity":"8",
+  "body":"9",
+  "finalScore":"89",
   "batchId": "hz4dzq6ilk",
   "transactionId": "cdcf476897109c6470e476eac2b90c05c223e64681311b2fabbb175f26ac8c8b",
   "timestamp": "2018-07-18T02:10:29.097Z"
 }
-
-
 ```
 
 Let's query one last time, to make sure we have everything we need. Query 
