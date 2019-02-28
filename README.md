@@ -854,8 +854,8 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 
 
 * #### Update application connection
-  - Copy the connection profile you downloaded into [server folder](web-app/server)
-  - Update the [config.json](web-app/server/config.json) file with:
+  - Copy the connection profile you downloaded into [server folder](server)
+  - Update the [config.json](server/config.json) file with:
     - The connection json file name you downloaded.
     - The <b>enroll id</b> and <b>enroll secret</b> for your app admin, which we earlier provided as `app-admin` and `app-adminpw`.
     - The orgMSP ID, which we provided as `org1msp`.
@@ -881,9 +881,9 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 ## Step 11. Run the application
 
 * #### Enroll admin
-  - First, navigate to the `web-app` directory, and install the node dependencies.
+  - First, navigate to the `server` directory, and install the node dependencies.
     ```bash
-    cd web-app/server
+    cd server
     npm install
     ```
 
@@ -909,27 +909,19 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
     ```
 
 
-
-* #### Start the application server
-  - From the `server` directory, start the server.
-
-    ```bash
-    npm start
-    ```
-
 * #### Start the web client
-  - In a new terminal, open the web client folder and install the dependencies.
+  - In a new terminal, open the web-app folder from the room blockchainbean2 directory and install the dependencies.
     ```bash
-    cd web-app/client
+    cd web-app
     npm install
     ```
 
   - Start the client:
     ```bash
-    npm run serve
+    npm start
     ```
 
-You can find the app running at http://localhost:8080/
+You can find the app running at http://localhost:3000/
 
 <br>
 <p align="center">
