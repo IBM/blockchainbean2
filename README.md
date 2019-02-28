@@ -921,7 +921,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
     npm start
     ```
 
-You can find the app running at http://localhost:3000/
+You can find the app running at http://localhost:3000/explorer
 
 
 ![packageFile](/docs/loopback.png)
@@ -935,24 +935,19 @@ You can go to the IBM Blockchain Platform v2 console to monitor your users and g
 </p>
 <br>
 
+## Conclusion
 
+So yes! Go ahead and run the /POST transactions as you did locally, and everything will be stored on the IBM Blockchain Platform. So now, you are officialy done with this tutorial. So what did you learn?
 
+1. You learned how to create a smart contract project with the IBM Blockchain VSCode extension.
+2. You learned how to deploy your smart contract on a local Hyperledger Fabric network.
+3. You learned how to update the ledger by submitting transactions to the network.
+4. You learned that Hyperledger stores data as key-value pairs, so to look up data on the network, you need to pass in a key that has a value associated with it. We did that by running the query method.
+5. You learned how to create a Kubernetes Cluster and IBM Blockchain service and to connect our client Loopback application to our cloud service via the connection profile we downloaded.
+6, You learned how to view the ledger of a specific channel, by clicking on the channel, the ledger, and then the individual transactions. 
 
+So at this point, you know more than me! Hopefully you feel pretty good at this point, and can dive a bit deeper into other, more complex topics, such as how to scale your network, how to optimize performance, etc. But for now, you know all of the basics to run a supply chain network on Hyperledger Fabric, both locally, and on the Cloud.
 
+GREAT JOB! YOU DID IT! :) 
 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
+And when you create the cool new startup unicorn after learning a bunch from this tutorial, don't forget to give me, or IBM Developer some credit :) 
