@@ -72,7 +72,7 @@ You can check your installed versions by running the following commands from a t
 5. [Instantiate Contract](#step-5-Instantiate-contract)
 6. [Submit Transactions](#step-6-submit-transactions)
 
-# Steps (Cloud Deployment - 🚧 Under Construction 🚧)
+# Steps (Cloud Deployment)
 
 7. [Create IBM Cloud services](#step-7-create-ibm-cloud-services)
 8. [Build a network](#step-8-build-a-network)
