@@ -798,7 +798,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 
 * #### Install a smart contract
   - Click the <b>Smart contracts</b> tab to install the smart contract.
-  - Click <b>Install smart contract</b> to upload the Fabcar smart contract package file, which you packaged earlier using the Visual Studio code extension.
+  - Click <b>Install smart contract</b> to upload the blockchainbean smart contract package file, which you packaged earlier using the Visual Studio code extension **look above at the end of step 3**.
   - Click on <b>Add file</b> and find your packaged smart contract.  
   - Once the contract is uploaded, click <b>Install</b>.
 
