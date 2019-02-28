@@ -923,11 +923,9 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 
 You can find the app running at http://localhost:3000/
 
-<br>
-<p align="center">
+
 ![packageFile](/docs/loopback.png)
-</p>
-<br>
+
 
 You can go to the IBM Blockchain Platform v2 console to monitor your users and get information on your channel including the blocks added.
 
