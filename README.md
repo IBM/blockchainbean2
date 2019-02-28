@@ -72,13 +72,13 @@ You can check your installed versions by running the following commands from a t
 5. [Instantiate Contract](#step-5-Instantiate-contract)
 6. [Submit Transactions](#step-6-submit-transactions)
 
-# Steps (Cloud Deployment)
+# Steps (Cloud Deployment - 🚧 Under Construction 🚧)
 
-7. [Create IBM Cloud services](#7-create-ibm-cloud-services)
-8. [Build a network](#8-build-a-network)
-9. [Deploy blockchainbean2 Smart Contract on the network](#9-deploy-fabcar-smart-contract-on-the-network)
-10. [Connect application to the network](#10-connect-application-to-the-network)
-11. [Run the application](#11-run-the-application)
+7. [Create IBM Cloud services](#step-7-create-ibm-cloud-services)
+8. [Build a network](#step-8-build-a-network)
+9. [Deploy blockchainbean2 Smart Contract on the network](#step-9-deploy-fabcar-smart-contract-on-the-network)
+10. [Connect application to the network](#step-10-connect-application-to-the-network)
+11. [Run the application](#step-11-run-the-application)
 
 ## Step 1. Clone the Repo
 
