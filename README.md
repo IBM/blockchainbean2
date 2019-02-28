@@ -925,7 +925,7 @@ You can find the app running at http://localhost:3000/
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/application.gif">
+![packageFile](/docs/loopback.png)
 </p>
 <br>
 
