@@ -813,7 +813,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
   - On the smart contracts tab, find the smart contract from the list installed on your peers and click <b>Instantiate</b> from the overflow menu on the right side of the row.
   - On the side panel that opens, select the channel, `mychannel` to instantiate the smart contract on. Click <b>Next</b>.
   - Select the organization members to be included in the policy, `org1msp`.  Click <b>Next</b>.
-  - Give <b>Function name</b> of `initLedger` and leave <b>Arguments</b> blank.
+  - Give <b>Function name</b> of `init` and leave <b>Arguments</b> blank.
   - Click <b>Instantiate</b>.
 
 <br>
