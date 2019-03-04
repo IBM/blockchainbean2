@@ -27,7 +27,7 @@ var userName = config.userName;
 var gatewayDiscovery = config.gatewayDiscovery;
 
 // connect to the connection file (needed for Cloud connection)
-const credentialsPath = path.join(process.cwd(), './../server/creds.json');
+const credentialsPath = path.join(process.cwd(), './../server/connection.json');
 const credentialsJSON = fs.readFileSync(credentialsPath, 'utf8');
 const credentials = JSON.parse(credentialsJSON);
 
