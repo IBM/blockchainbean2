@@ -62,6 +62,10 @@ You can check your installed versions by running the following commands from a t
 - `docker --version`
 - `docker-compose --version`
 
+# Watch the Video - Create a fair trade supply network with Hyperledger Fabric 1.4 (Local)
+
+[![](docs/local.png)](https://www.youtube.com/watch?v=mG2TCIPlvk0)
+
 
 # Steps (Local Deployment)
 
