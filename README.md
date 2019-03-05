@@ -27,6 +27,10 @@ When the reader has completed this Code Pattern, they will understand how to:
 * Create and use a (free) Kubernetes Cluster
 * Deploy a Node.js app in the cloud that will interact with our smart contract
 
+# Watch the Video - Create a fair trade supply network with Hyperledger Fabric 1.4 (Local)
+
+[![](docs/local.png)](https://www.youtube.com/watch?v=mG2TCIPlvk0)
+
 ## Requirements
 
 We will use the 
@@ -61,11 +65,6 @@ You can check your installed versions by running the following commands from a t
 - `yo --version`
 - `docker --version`
 - `docker-compose --version`
-
-# Watch the Video - Create a fair trade supply network with Hyperledger Fabric 1.4 (Local)
-
-[![](docs/local.png)](https://www.youtube.com/watch?v=mG2TCIPlvk0)
-
 
 # Steps (Local Deployment)
 
