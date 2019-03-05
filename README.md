@@ -139,13 +139,15 @@ Right-click under your folders in your workspace area and then click *Add Folder
 <p align="center">
   <img src="docs/blockchainView.png">
 </p>
+
   Go ahead and start your local fabric by clicking on the 
  *three dot symbol* to the right of *LOCAL FABRIC OPS*
  and then *Start Fabric Runtime*. Once the runtime is finished starting, under *Local Fabric 
  Ops* you should see *Smart Contracts* and a section for both *installed* and *instantiated*.
 
-![packageFile](/docs/contracts.png)
-
+<p align="center">
+  <img src="docs/contracts.png">
+</p>
  Now, let's click on *+ Install* and choose the peer that is available. Then the extension will ask you which package to 
  install. Choose *blockchainbean2@0.0.1* as shown in the picture.
  
