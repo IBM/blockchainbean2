@@ -76,7 +76,7 @@ You can check your installed versions by running the following commands from a t
 5. [Instantiate Contract](#step-5-Instantiate-contract)
 6. [Submit Transactions](#step-6-submit-transactions)
 
-# Steps (Cloud Deployment - 🚧 Under Construction 🚧)
+# Steps (Cloud Deployment)
 
 7. [Create IBM Cloud services](#step-7-create-ibm-cloud-services)
 8. [Build a network](#step-8-build-a-network)
@@ -817,7 +817,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
   - On the smart contracts tab, find the smart contract from the list installed on your peers and click <b>Instantiate</b> from the overflow menu on the right side of the row.
   - On the side panel that opens, select the channel, `mychannel` to instantiate the smart contract on. Click <b>Next</b>.
   - Select the organization members to be included in the policy, `org1msp`.  Click <b>Next</b>.
-  - Give <b>Function name</b> of `initLedger` and leave <b>Arguments</b> blank.
+  - Give <b>Function name</b> of `init` and leave <b>Arguments</b> blank.
   - Click <b>Instantiate</b>.
 
 <br>
@@ -925,13 +925,11 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
     npm start
     ```
 
-You can find the app running at http://localhost:3000/
+You can find the app running at http://localhost:3000/explorer
 
-<br>
-<p align="center">
-  <img src="docs/doc-gifs/application.gif">
-</p>
-<br>
+
+![packageFile](/docs/loopback.png)
+
 
 You can go to the IBM Blockchain Platform v2 console to monitor your users and get information on your channel including the blocks added.
 
@@ -941,24 +939,19 @@ You can go to the IBM Blockchain Platform v2 console to monitor your users and g
 </p>
 <br>
 
+## Conclusion
 
+So yes! Go ahead and run the /POST transactions as you did locally, and everything will be stored on the IBM Blockchain Platform. So now, you are officialy done with this tutorial. So what did you learn?
 
+1. You learned how to create a smart contract project with the IBM Blockchain VSCode extension.
+2. You learned how to deploy your smart contract on a local Hyperledger Fabric network.
+3. You learned how to update the ledger by submitting transactions to the network.
+4. You learned that Hyperledger stores data as key-value pairs, so to look up data on the network, you need to pass in a key that has a value associated with it. We did that by running the query method.
+5. You learned how to create a Kubernetes Cluster and IBM Blockchain service and to connect our client Loopback application to our cloud service via the connection profile we downloaded.
+6, You learned how to view the ledger of a specific channel, by clicking on the channel, the ledger, and then the individual transactions. 
 
+So at this point, you know more than me! Hopefully you feel pretty good at this point, and can dive a bit deeper into other, more complex topics, such as how to scale your network, how to optimize performance, etc. But for now, you know all of the basics to run a supply chain network on Hyperledger Fabric, both locally, and on the Cloud.
 
+GREAT JOB! YOU DID IT! :) 
 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
+And when you create the cool new startup unicorn after learning a bunch from this tutorial, don't forget to give me, or IBM Developer some credit :) 
