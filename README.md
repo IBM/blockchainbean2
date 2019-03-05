@@ -148,6 +148,7 @@ Right-click under your folders in your workspace area and then click *Add Folder
 <p align="center">
   <img src="docs/contracts.png">
 </p>
+
  Now, let's click on *+ Install* and choose the peer that is available. Then the extension will ask you which package to 
  install. Choose *blockchainbean2@0.0.1* as shown in the picture.
  
