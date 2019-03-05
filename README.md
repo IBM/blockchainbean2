@@ -135,8 +135,10 @@ Right-click under your folders in your workspace area and then click *Add Folder
  Next, it's time to install and instantiate our contract on the peer. First click on the blockchain icon in the 
  left side of VSCode. Once you click it, you should see `Smart Contract Packages` and the blockchainbean2@0.0.1 package 
  there. In my picture I have other contracts there as well.
-![packageFile](/docs/blockchainView.png)
 
+<p align="center">
+  <img src="docs/blockchainView.png">
+</p>
   Go ahead and start your local fabric by clicking on the 
  *three dot symbol* to the right of *LOCAL FABRIC OPS*
  and then *Start Fabric Runtime*. Once the runtime is finished starting, under *Local Fabric 
