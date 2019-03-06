@@ -384,9 +384,22 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 
 * #### Update application connection
   - Copy the connection profile you downloaded into [server folder](server)
+  - Name the connection profile you downloaded **ibpConnection.json**
+  - Your new folder structure should look like below (i.e. should have your newly downloaded and newly renamed file **ibpConnection.json**: 
+
+  <p align="center">
+    <img src="docs/ibpConnection.png">
+  </p>
+
+  - The **ibpConnection.json** file should look something like this: 
+
+   <p align="center">
+    <img src="docs/ibpConnectionCode.png">
+  </p>
+
   - Update the [config.json](server/config.json) file with:
     - The connection json file name you downloaded.
-    - The <b>enroll id</b> and <b>enroll secret</b> for your app admin, which we earlier provided as `app-admin` and `app-adminpw`.
+    - The <b>enroll id</b> and <b>enroll secret</b> for your app admin, which we earlier provided as `appadmin` and `appadminpw`.
     - The orgMSP ID, which we provided as `org1msp`.
     - The caName, which can be found in your connection json file under "organization" -> "org1msp" -> certificateAuthorities". This would be like an IP address and a port.
     - The username you would like to register.
@@ -394,11 +407,13 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 
 > the current default setup is to connect to a local fabric instance from VS Code
 
+- Once you are done, the final version of the **config.json** should look something like this:
+
 ```js
 {
-    "connection_file": "mychannel_fabcar_profile.json",
-    "appAdmin": "app-admin",
-    "appAdminSecret": "app-adminpw",
+    "connection_file": "ibpConnection.json",
+    "appAdmin": "appadmin",
+    "appAdminSecret": "appadminpw",
     "orgMSPID": "org1msp",
     "caName": "169.46.208.151:30404",
     "userName": "user1",
@@ -437,243 +452,6 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
     Successfully registered and enrolled admin user user1 and imported it into the wallet
     ```
 
-* #### Update blockchainClient to use IBM Cloud connection profile
-
-  - In VSCode, open the **web-app/src/blockchainClient.ts** file from the room **blockchainbean2** directory - it should look like the picture 
-  below:
-
-  <p align="center">
-    <img src="docs/oldClient.png">
-  </p>
-
-  - Copy and paste lines 18-232 from **commands.txt** file in the
-  blockchainbean2 directory into the already opened 
-  **blockchainClient.ts** file. Note - you must replace **all** of the existing code for this to work!
-
-```javascript
-const { FileSystemWallet, Gateway, X509WalletMixin } = require('fabric-network');
-const fs = require('fs');
-const path = require('path');
-
-// capture network variables from config.json (needed for Cloud connection)
-const configPath = path.join(process.cwd(), './../server/config.json');
-const configJSON = fs.readFileSync(configPath, 'utf8');
-const config = JSON.parse(configJSON);
-var userName = config.userName;
-var gatewayDiscovery = config.gatewayDiscovery;
-
-// connect to the connection file (needed for Cloud connection)
-const credentialsPath = path.join(process.cwd(), './../server/connection.json');
-const credentialsJSON = fs.readFileSync(credentialsPath, 'utf8');
-const credentials = JSON.parse(credentialsJSON);
-
-// A wallet stores a collection of identities for use
-// const wallet = new FileSystemWallet('./local_fabric/wallet');
-// console.log('wallet')
-// console.log(wallet)
-
-
-export module BlockChainModule {
-
-  export class BlockchainClient {
-    async connectToNetwork() {
-
-      const gateway = new Gateway();
-
-      try {
-        const walletPath = path.join(process.cwd(), './../server/wallet');
-        const wallet = new FileSystemWallet(walletPath);
-        console.log(`Wallet path: ${walletPath}`);
-
-        // const identityLabel = 'Admin@org1.example.com';
-        // let connectionProfile = yaml.safeLoad(fs.readFileSync('./network.yaml', 'utf8'));
-
-        // let connectionOptions = {
-        //   identity: identityLabel,
-        //   wallet: wallet,
-        //   discovery: {
-        //     asLocalhost: true
-        //   }
-        // };
-        await gateway.connect(credentials, { wallet, identity: userName, discovery: gatewayDiscovery });
-        // Connect to gateway using network.yaml file and our certificates in _idwallet directory
-        // await gateway.connect(connectionProfile, connectionOptions);
-
-        console.log('Connected to Fabric gateway.');
-
-        // Connect to our local fabric
-        const network = await gateway.getNetwork('mychannel');
-
-        console.log('Connected to mychannel. ');
-
-        // Get the contract we have installed on the peer
-        const contract = await network.getContract('blockchainbean2');
-
-
-        let networkObj = {
-          contract: contract,
-          network: network
-        };
-
-        return networkObj;
-
-      } catch (error) {
-        console.log(`Error processing transaction. ${error}`);
-        console.log(error.stack);
-      } finally {
-        console.log('Done connecting to network.');
-        // gateway.disconnect();
-      }
-
-    }
-
-    async addMember(args: any) {
-      //call addMember smart contract function
-      //$TODO: dynamically call submitTransaction
-      let response = await args.contract.submitTransaction(args.function,
-        args.id, args.organization, args.address, args.memberType);
-      return response;
-
-
-    }
-
-
-
-    async queryByKey2(contract: any, keyPassed: any) {
-
-      // let str = 'query'
-      // let response = await keyPassed.contract.submitTransaction('query', 'arg1', 'arg2');
-
-      let response = await contract.evaluateTransaction('query', keyPassed);
-      console.log('query by key response: ')
-      console.log(JSON.parse(response.toString()))
-      console.log(response.length)
-      if (response.length === 2) {
-        response = `${keyPassed} does not exist`;
-        return response;
-      }
-      response = JSON.parse(response.toString());
-      return response;
-
-    }
-
-    async queryAll(contract: any) {
-      let response = await contract.evaluateTransaction('queryAll');
-      console.log(response.toString())
-      return response;
-    }
-
-    async queryByKey(keyPassed: any) {
-
-      // let str = 'query'
-      // let response = await keyPassed.contract.submitTransaction('query', 'arg1', 'arg2');
-
-      let response = await keyPassed.contract.evaluateTransaction('query', keyPassed.id);
-      console.log('query by key response: ')
-      console.log(JSON.parse(response.toString()))
-      console.log(response.length)
-      if (response.length === 2) {
-        response = `${keyPassed.id} does not exist`;
-        return response;
-      }
-      response = JSON.parse(response.toString());
-      return response;
-
-    }
-
-    async submitFairTradeData(args: any) {
-      console.log('args in the blockchain client')
-      console.log(args)
-
-      let response = await args.contract.submitTransaction(args.function,
-        args.reportName, args.orgDescription, args.reportYear, args.fairTradePremiumInvested,
-        args.investmentTitle1, args.investmentAmount1, args.investmentAmount2, args.investmentTitle2,
-        args.investmentAmount3, args.investmentTitle3, args.batchId, args.transactionId, args.timestamp);
-      return response;
-
-    }
-
-    async submitCupping(args: any) {
-      console.log('args in the blockchain client')
-      console.log(args)
-
-      let response = await args.contract.submitTransaction(args.function,
-        args.cupper, args.aroma, args.flavor, args.afterTaste,
-        args.acidity, args.body, args.finalScore, args.batchId,
-        args.transactionId, args.timestamp);
-      return response;
-
-    }
-
-    async submitPackingList(args: any) {
-      console.log('args in the blockchain client, packing list')
-      console.log(args)
-
-      let response = await args.contract.submitTransaction(args.function,
-        args.grower, args.trader, args.PL_Invoice_no, args.PL_IssueDate,
-        args.PL_ICO_no, args.PL_ICO_Lot, args.PL_FDA_NO,
-        args.PL_Bill_of_Lading_No, args.PL_LoadedVessel, args.PL_VesselVoyage_No,
-        args.PL_Container_No, args.PL_Seal_no, args.PL_timestamp, args.batchId,
-        args.transactionId, args.timestamp
-      );
-
-      return response;
-
-    }
-
-    async submitWeightTally(args: any) {
-      console.log('args in the blockchain client,weight tally')
-      console.log(args)
-
-      let response = await args.contract.submitTransaction(args.function,
-        args.dateStripped, args.marks, args.bagsExpected, args.condition,
-        args.insectActivity, args.batchId, args.transactionId, args.timestamp
-      );
-
-      return response;
-
-    }
-
-    async addCoffee(args: any) {
-      console.log('args in the blockchain client,addcoffee')
-      console.log(args)
-
-      let response = await args.contract.submitTransaction(args.function,
-        args.size, args.roast, args.batchState, args.grower,
-        args.transactionId, args.timestamp
-      );
-
-      return response;
-
-    }
-
-    async pourCup(args: any) {
-      console.log('args in the blockchain client,addcoffee')
-      console.log(args)
-
-
-      let response = await args.contract.submitTransaction(args.function,
-        args.cupId, args.batchId, args.transactionId
-      );
-
-      if (response.length === 2) {
-        response = `batchId ${args.batchId} does not exist`;
-        return response;
-      }
-
-      return response;
-
-    }
-  }
-}
-```
-- Your updated **blockchainClient.ts** file should look like the picture below:
-
-<p align="center">
-  <img src="docs/newClient.png">
-</p>
-
-- If it looks like the picture above, save the file.
 
 * #### Start the web client
   - In a new terminal, open the web-app folder from the room blockchainbean2 directory and install the dependencies.
