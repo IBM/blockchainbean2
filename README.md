@@ -75,17 +75,15 @@ rest of this guide will focus on cloud deployment**
 1. [Clone the Repo](#step-1-clone-the-repo)
 2. [Install Dependencies](#step-2-install-dependencies)
 3. [Package Contract](#step-3-package-contract)
-4. [Install Contract](#step-4-install-contract)
+<!-- 4. [Install Contract](#step-4-install-contract)
 5. [Instantiate Contract](#step-5-Instantiate-contract)
-6. [Submit Transactions](#step-6-submit-transactions)
+6. [Submit Transactions](#step-6-submit-transactions) -->
 
-# Steps (Cloud Deployment)
-
-7. [Create IBM Cloud services](#step-7-create-ibm-cloud-services)
-8. [Build a network](#step-8-build-a-network)
-9. [Deploy blockchainbean2 Smart Contract on the network](#step-9-deploy-blockchainbean2-smart-contract-on-the-network)
-10. [Connect application to the network](#step-10-connect-application-to-the-network)
-11. [Run the application](#step-11-run-the-application)
+4. [Create IBM Cloud services](#step-4-create-ibm-cloud-services)
+5. [Build a network](#step-5-build-a-network)
+6. [Deploy blockchainbean2 Smart Contract on the network](#step-6-deploy-blockchainbean2-smart-contract-on-the-network)
+7. [Connect application to the network](#step-7-connect-application-to-the-network)
+8. [Run the application](#step-8-run-the-application)
 
 ## Step 1. Clone the Repo
 
@@ -622,7 +620,7 @@ cloud!
 10. [Connect application to the network](#10-connect-application-to-the-network)
 11. [Run the application](#11-run-the-application)
 
-## Step 7. Create IBM Cloud services
+## Step 4. Create IBM Cloud services
 
 * Create the [IBM Cloud Kubernetes Service](https://cloud.ibm.com/catalog/infrastructure/containers-kubernetes).  You can find the service in the `Catalog`.  For this code pattern, we can use the `Free` cluster, and give it a name.  Note, that the IBM Cloud allows one instance of a free cluster and expires after 30 days.
 
@@ -656,7 +654,7 @@ cloud!
 </p>
 <br>
 
-## Step 8. Build a network
+## Step 5. Build a network
 
 We will build a network as provided by the IBM Blockchain Platform [documentation](https://console.bluemix.net/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network).  This will include creating a channel with a single peer organization with its own MSP and CA (Certificate Authority), and an orderer organization with its own MSP and CA. We will create the respective identities to deploy peers and operate nodes.
 
@@ -815,7 +813,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 </p>
 <br>
 
-## Step 9. Deploy Blockchainbean2 Smart Contract on the network
+## Step 6. Deploy Blockchainbean2 Smart Contract on the network
 
 * #### Install a smart contract
   - Click the <b>Smart contracts</b> tab to install the smart contract.
@@ -843,7 +841,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 </p>
 <br>
 
-## Step 10. Connect application to the network
+## Step 7. Connect application to the network
 
 * #### Connect with sdk through connection profile
   - Under the Instantiated Smart Contract, click on `Connect with SDK` from the overflow menu on the right side of the row.
@@ -899,7 +897,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 ```
 
 
-## Step 11. Run the application
+## Step 8. Run the application
 
 * #### Enroll admin
   - First, navigate to the `server` directory, and install the node dependencies.
