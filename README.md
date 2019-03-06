@@ -67,7 +67,7 @@ You can check your installed versions by running the following commands from a t
 - `docker-compose --version`
 
 **Note: If you only want to deploy to cloud, you still need to have 
-a .cds file that you get from the end of step 3. If you have that, 
+a .cds file that you get from the end of step 3. After you have that, 
 you can skip to step 7.**
 
 # Steps (Local Deployment)
@@ -83,7 +83,7 @@ you can skip to step 7.**
 
 7. [Create IBM Cloud services](#step-7-create-ibm-cloud-services)
 8. [Build a network](#step-8-build-a-network)
-9. [Deploy blockchainbean2 Smart Contract on the network](#step-9-deploy-fabcar-smart-contract-on-the-network)
+9. [Deploy blockchainbean2 Smart Contract on the network](#step-9-deploy-blockchainbean2-smart-contract-on-the-network)
 10. [Connect application to the network](#step-10-connect-application-to-the-network)
 11. [Run the application](#step-11-run-the-application)
 
