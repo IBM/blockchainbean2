@@ -66,7 +66,9 @@ You can check your installed versions by running the following commands from a t
 - `docker --version`
 - `docker-compose --version`
 
-**Note: If you only want to run locally, you find the 
+**Note: If you only want to run locally and or 
+see how to submit supply chain documents to 
+this app, you can find the 
 rest of the steps [here](./docs/run-local.md). The 
 rest of this guide will focus on cloud deployment**
 
@@ -75,10 +77,6 @@ rest of this guide will focus on cloud deployment**
 1. [Clone the Repo](#step-1-clone-the-repo)
 2. [Install Dependencies](#step-2-install-dependencies)
 3. [Package Contract](#step-3-package-contract)
-<!-- 4. [Install Contract](#step-4-install-contract)
-5. [Instantiate Contract](#step-5-Instantiate-contract)
-6. [Submit Transactions](#step-6-submit-transactions) -->
-
 4. [Create IBM Cloud services](#step-4-create-ibm-cloud-services)
 5. [Build a network](#step-5-build-a-network)
 6. [Deploy blockchainbean2 Smart Contract on the network](#step-6-deploy-blockchainbean2-smart-contract-on-the-network)
@@ -468,7 +466,10 @@ You can go to the IBM Blockchain Platform v2 console to monitor your users and g
 
 ## Conclusion
 
-So yes! Go ahead and run the /POST transactions as you did locally, and everything will be stored on the IBM Blockchain Platform. So now, you are officialy done with this tutorial. So what did you learn?
+So yes! Go ahead and run the /POST transactions as you did 
+[locally](./docs/run-local.md), and
+ everything will be stored on the IBM Blockchain Platform. So now, you are 
+ officialy done with this tutorial. So what did you learn?
 
 1. You learned how to create a smart contract project with the IBM Blockchain VSCode extension.
 2. You learned how to deploy your smart contract on a local Hyperledger Fabric network.
