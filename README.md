@@ -166,7 +166,9 @@ You guessed it. Next, it's time to instantiate.
  
   Click on *+ Instantiate* 
 
-![packageFile](/docs/instantiate.png)
+<p align="center">
+  <img src="docs/instantiate.png">
+</p>
 
 and then choose 
  *mychannel* for the channel to instantiate the contract on.
