@@ -407,7 +407,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 
 > the current default setup is to connect to a local fabric instance from VS Code
 
-- Once you are done, the final version of the **config.json** should look something like this:
+- Once you are done, the final version of the **config.json** should look something like this (note that I took the caName from the above pic):
 
 ```js
 {
@@ -415,7 +415,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
     "appAdmin": "appadmin",
     "appAdminSecret": "appadminpw",
     "orgMSPID": "org1msp",
-    "caName": "169.46.208.151:30404",
+    "caName": "173.193.106.28:32634",
     "userName": "user1",
     "gatewayDiscovery": { "enabled": true, "asLocalhost": false }
 }
