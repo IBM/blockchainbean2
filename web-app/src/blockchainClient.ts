@@ -1,11 +1,18 @@
-
-const yaml = require('js-yaml');
-const { FileSystemWallet, Gateway } = require('fabric-network');
+const { FileSystemWallet, Gateway, X509WalletMixin } = require('fabric-network');
 const fs = require('fs');
+const path = require('path');
 
-// A wallet stores a collection of identities for use
-const wallet = new FileSystemWallet('./../local_fabric/wallet');
+// capture network variables from config.json (needed for Cloud connection)
+const configPath = path.join(process.cwd(), './../server/config.json');
+const configJSON = fs.readFileSync(configPath, 'utf8');
+const config = JSON.parse(configJSON);
+var userName = config.userName;
+var gatewayDiscovery = config.gatewayDiscovery;
 
+// connect to the connection file (needed for Cloud connection)
+const credentialsPath = path.join(process.cwd(), './../server/connection.json');
+const credentialsJSON = fs.readFileSync(credentialsPath, 'utf8');
+const credentials = JSON.parse(credentialsJSON);
 
 export module BlockChainModule {
 
@@ -15,22 +22,23 @@ export module BlockChainModule {
       const gateway = new Gateway();
 
       try {
-        console.log('connecting to Fabric network...')
+        const walletPath = path.join(process.cwd(), './../server/wallet');
+        const wallet = new FileSystemWallet(walletPath);
+        console.log(`Wallet path: ${walletPath}`);
 
+        // const identityLabel = 'Admin@org1.example.com';
+        // let connectionProfile = yaml.safeLoad(fs.readFileSync('./network.yaml', 'utf8'));
 
-        const identityLabel = 'Admin@org1.example.com';
-        let connectionProfile = yaml.safeLoad(fs.readFileSync('./network.yaml', 'utf8'));
-
-        let connectionOptions = {
-          identity: identityLabel,
-          wallet: wallet,
-          discovery: {
-            asLocalhost: true
-          }
-        };
-
+        // let connectionOptions = {
+        //   identity: identityLabel,
+        //   wallet: wallet,
+        //   discovery: {
+        //     asLocalhost: true
+        //   }
+        // };
+        await gateway.connect(credentials, { wallet, identity: userName, discovery: gatewayDiscovery });
         // Connect to gateway using network.yaml file and our certificates in _idwallet directory
-        await gateway.connect(connectionProfile, connectionOptions);
+        // await gateway.connect(connectionProfile, connectionOptions);
 
         console.log('Connected to Fabric gateway.');
 
@@ -199,4 +207,3 @@ export module BlockChainModule {
     }
   }
 }
-

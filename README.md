@@ -450,7 +450,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
   blockchainbean2 directory into the already opened 
   **blockchainClient.ts** file. Note - you must replace **all** of the existing code for this to work!
 
-```JavaScript
+```javascript
 const { FileSystemWallet, Gateway, X509WalletMixin } = require('fabric-network');
 const fs = require('fs');
 const path = require('path');
@@ -673,7 +673,7 @@ export module BlockChainModule {
   <img src="docs/newClient.png">
 </p>
 
-- If it looks as the picture, save the file.
+- If it looks like the picture above, save the file.
 
 * #### Start the web client
   - In a new terminal, open the web-app folder from the room blockchainbean2 directory and install the dependencies.
