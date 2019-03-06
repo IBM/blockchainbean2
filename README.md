@@ -66,11 +66,11 @@ You can check your installed versions by running the following commands from a t
 - `docker --version`
 - `docker-compose --version`
 
-**Note: If you only want to deploy to cloud, you still need to have 
-a .cds file that you get from the end of step 3. After you have that, 
-you can skip to step 7.**
+**Note: If you only want to run locally, you find the 
+rest of the steps [here](./docs/run-local.md). The 
+rest of this guide will focus on cloud deployment**
 
-# Steps (Local Deployment)
+# Steps (Cloud Deployment)
 
 1. [Clone the Repo](#step-1-clone-the-repo)
 2. [Install Dependencies](#step-2-install-dependencies)
