@@ -211,7 +211,9 @@ web-app$ node query.js
 ```
 Your output should be the following:
 
-![packageFile](/docs/queryScript.png)
+<p align="center">
+  <img src="docs/queryScript.png">
+</p>
 
 ⚠️ if you get a grpc error run:
 ```sh
@@ -604,7 +606,11 @@ our batch (hz4dzq6ilk) so that you can get all the relevant supply chain info on
 batch of coffee that was used to pour the cup! Woo!!
 
 All the transactions are in the chain and now we can focus on 
-querying. Good job :) You are officially a blockchain monster now! 
+querying. Good job :) You are officially a blockchain master now! 
+Now it's time to connect our app to the blockchain service running in the
+cloud! 
+
+# Steps (Cloud Deployment)
 
 7. [Create IBM Cloud services](#7-create-ibm-cloud-services)
 8. [Build a network](#8-build-a-network)
