@@ -192,8 +192,9 @@ Leave the arguments blank, and hit *enter*
  This will instantiate the smart contract. You should see the contract 
  under the *instantiated* tab on the left-hand side, as shown in the picture. 
 
-![packageFile](/docs/instantiated.png)
-
+<p align="center">
+  <img src="docs/instantiated.png">
+</p>
 
 ## Step 6. Submit Transactions
 *Note that this step is the same whether for local or cloud deployment. The only 
