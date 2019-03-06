@@ -401,7 +401,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
     - The connection json file name you downloaded.
     - The <b>enroll id</b> and <b>enroll secret</b> for your app admin, which we earlier provided as `appadmin` and `appadminpw`.
     - The orgMSP ID, which we provided as `org1msp`.
-    - The caName, which can be found in your connection json file under "organization" -> "org1msp" -> certificateAuthorities". This would be like an IP address and a port.
+    - The caName, which can be found in your connection json file under "organization" -> "org1msp" -> certificateAuthorities". This would be like an IP address and a port. This is circled in red above.
     - The username you would like to register.
     - Update gateway discovery to `{ enabled: true, asLocalhost: false }` to connect to IBP.
 
