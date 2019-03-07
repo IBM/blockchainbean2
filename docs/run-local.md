@@ -70,7 +70,7 @@ Right-click under your folders in your workspace area and then click *Add Folder
  there. In my picture I have other contracts there as well.
 
 <p align="center">
-  <img src="docs/blockchainView.png">
+  <img src="blockchainView.png">
 </p>
 
   Go ahead and start your local fabric by clicking on the 
@@ -79,7 +79,7 @@ Right-click under your folders in your workspace area and then click *Add Folder
  Ops* you should see *Smart Contracts* and a section for both *installed* and *instantiated*.
 
 <p align="center">
-  <img src="docs/contracts.png">
+  <img src="contracts.png">
 </p>
 
  Now, let's click on *+ Install* and choose the peer that is available. Then the extension will ask you which package to 
@@ -100,7 +100,7 @@ You guessed it. Next, it's time to instantiate.
   Click on *+ Instantiate* 
 
 <p align="center">
-  <img src="docs/instantiate.png">
+  <img src="instantiate.png">
 </p>
 
 and then choose 
@@ -126,7 +126,7 @@ Leave the arguments blank, and hit *enter*
  under the *instantiated* tab on the left-hand side, as shown in the picture. 
 
 <p align="center">
-  <img src="docs/instantiated.png">
+  <img src="instantiated.png">
 </p>
 
 ## Step 6. Submit Transactions
@@ -145,7 +145,7 @@ web-app$ node query.js
 Your output should be the following:
 
 <p align="center">
-  <img src="docs/queryScript.png">
+  <img src="queryScript.png">
 </p>
 
 ⚠️ if you get a grpc error run:

@@ -451,6 +451,12 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
     ```bash
     Successfully registered and enrolled admin user user1 and imported it into the wallet
     ```
+  - If you get an error such as this 
+  
+  ```Error: fabric-ca request register failed with errors [[{"code":0,"message":"Registration of 'user1' failed: Identity 'user1' is already registered"}]]```
+
+  go ahead and change the user in **config.json** file, you can use any
+  username you want.
 
 
 * #### Start the web client
