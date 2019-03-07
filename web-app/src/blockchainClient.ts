@@ -10,9 +10,11 @@ const configJSON = fs.readFileSync(configPath, 'utf8');
 const config = JSON.parse(configJSON);
 var userName = config.userName;
 var gatewayDiscovery = config.gatewayDiscovery;
+var connection_file = config.connection_file;
+
 
 // connect to the connection file
-const ccpPath = path.join(process.cwd(), './../server/ibpConnection.json');
+const ccpPath = path.join(process.cwd(), './../server/' + connection_file);
 const ccpJSON = fs.readFileSync(ccpPath, 'utf8');
 const ccp = JSON.parse(ccpJSON);
 
