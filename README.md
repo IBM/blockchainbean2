@@ -18,7 +18,7 @@ page. Hint, try cupId 'NJB123' for the result shown below.
 
 All documents that were used in the supply chain are available online, and can be found by clicking the view the blockchain button at https://www.ibm.com/thought-leadership/blockchainbean/
 
-In this Code Pattern we will create a blockchain app that increases visibility and efficiency in the supply chain of a coffee retailer. We will use different transactions to show different possible actions for the different participants in the supply chain. This sample application will record all transactions on the IBM Blockchain V2 Beta, and enable a coffee retailer to ensure the customer that their coffee is organic and fair-trade. The Code Pattern can be useful to developers that are looking into learning more about creating applications that integrate supply chains with Hyperledger Fabric.
+In this code pattern we will create a blockchain app that increases visibility and efficiency in the supply chain of a coffee retailer using IBM Blockchain Platform 2.0 Beta. We will use different transactions to show different possible actions for the different participants in the supply chain. This sample application will record all transactions on the IBM Blockchain V2 Beta, and enable a coffee retailer to ensure the customer that their coffee is organic and fair-trade. The Code Pattern can be useful to developers that are looking into learning more about creating applications that integrate supply chains with Hyperledger Fabric.
 
 When the reader has completed this Code Pattern, they will understand how to:
 
@@ -36,6 +36,11 @@ When the reader has completed this Code Pattern, they will understand how to:
 [![](docs/local.png)](https://www.youtube.com/watch?v=mG2TCIPlvk0)
 
 
+**This pattern assumes you have VSCode and IBM Blockchain Platform Extension for VSCode installed.** 
+
+- [Install VSCode](https://code.visualstudio.com/download)
+- [Install IBM Blockchain Platform Extension for VSCode](https://github.com/IBM-Blockchain/blockchain-vscode-extension)
+
 
 ## Requirements
 
@@ -49,7 +54,7 @@ You will need the following installed in order to use the extension:
 - [Docker version v17.06.2-ce or greater](https://www.docker.com/get-docker)
 - [Docker Compose v1.14.0 or greater](https://docs.docker.com/compose/install/)
 
-> ⚠ Please note: From version 0.1.0+, your smart contract package.json should depend on at least fabric-contract@1.4.0-beta2. This is only required for smart contracts not created using version 0.1.0+ of this extension.
+> ⚠ Please note: From version 0.1.0+ for the IBM Blockchain Platform VSCode Extension, your smart contract package.json should depend on at least fabric-contract@1.4.0-beta2. This is only required for smart contracts not created using version 0.1.0+ of this extension.
 
 If you are using Windows, you must also ensure the following:
 - Your version of Windows supports Hyper-V and Docker:
@@ -138,7 +143,8 @@ Right-click under your folders in your workspace area and then click *Add Folder
 
 ## Step 4. Create IBM Cloud services
 
-* Create the [IBM Cloud Kubernetes Service](https://cloud.ibm.com/catalog/infrastructure/containers-kubernetes).  You can find the service in the `Catalog`.  For this code pattern, we can use the `Free` cluster, and give it a name.  Note, that the IBM Cloud allows one instance of a free cluster and expires after 30 days.
+* Create the [IBM Cloud Kubernetes Service](https://cloud.ibm.com/catalog/infrastructure/containers-kubernetes).  You can find the service in the `Catalog`.  For this code pattern, we can use the `Free` cluster, and give it a name.  Note, that the IBM Cloud allows one instance of a free cluster and expires after 30 days. <b>The cluster takes around 10-15
+minutes to provision, so please be patient!</b>
 
 <br>
 <p align="center">
