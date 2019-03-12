@@ -411,7 +411,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 
   - Update the [config.json](server/config.json) file with:
     - The connection json file name you downloaded.
-    - The <b>enroll id</b> and <b>enroll secret</b> for your app admin, which we earlier provided as `appadmin` and `appadminpw`.
+    - The <b>enroll id</b> and <b>enroll secret</b> for your app admin, which we earlier provided as `app-admin` and `app-adminpw`.
     - The orgMSP ID, which we provided as `org1msp`.
     - The caName, which can be found in your connection json file under "organization" -> "org1msp" -> certificateAuthorities". This would be like an IP address and a port. This is circled in red above.
     - The username you would like to register.
@@ -442,7 +442,11 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
     cd server
     npm install
     ```
-
+  - ⚠️ if you get a grpc error run:
+    ```bash
+    npm rebuild
+    ```
+  
   - Run the `enrollAdmin.js` script
     ```bash
     node enrollAdmin.js
