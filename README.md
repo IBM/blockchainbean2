@@ -518,7 +518,7 @@ To do this, please follow the guide [here:](https://medium.com/loopback/deploy-y
 ## Conclusion
 
 So yes! Go ahead and run the /POST transactions as shown in 
-[these steps](./docs/run-local.md), and
+[these steps](https://github.com/horeaporutiu/blockchainbean2/blob/master/docs/run-local.md#step-6-submit-transactions), and
  everything will be stored on the IBM Blockchain Platform. So now, you are 
  officialy done with this tutorial. So what did you learn?
 
