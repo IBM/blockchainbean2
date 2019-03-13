@@ -482,10 +482,9 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 
 
 * #### Start the web client
-  - In a new terminal, open the web-app folder from the room blockchainbean2 directory and install the dependencies.
+  - In a new terminal, open the web-app folder from the room blockchainbean2 directory.
     ```bash
     cd web-app
-    npm install
     ```
 
   - Start the client:
