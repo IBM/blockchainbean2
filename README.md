@@ -35,7 +35,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 # Watch the Video - Create a fair trade supply network with Hyperledger Fabric 1.4 (Cloud)
 
-[![](docs/ibpVideo.png)](https://www.youtube.com/watch?v=btV4WvC6c_E&t=1085s)
+[![](docs/ibpVideo.png)](https://www.youtube.com/watch?v=8wtHsD7-kS4)
 
 # Watch the Video - Create a fair trade supply network with Hyperledger Fabric 1.4 (Local)
 
