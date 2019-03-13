@@ -27,6 +27,12 @@ When the reader has completed this Code Pattern, they will understand how to:
 * Create and use a (free) Kubernetes Cluster
 * Deploy a Node.js app in the cloud that will interact with our smart contract
 
+<br>
+<p align="center">
+  <img src="docs/app-architecture.png">
+</p>
+<br>
+
 # Watch the Video - Create a fair trade supply network with Hyperledger Fabric 1.4 (Cloud)
 
 [![](docs/ibpVideo.png)](https://www.youtube.com/watch?v=btV4WvC6c_E&t=1085s)
