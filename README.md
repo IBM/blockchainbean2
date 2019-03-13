@@ -507,6 +507,14 @@ You can go to the IBM Blockchain Platform v2 console to monitor your users and g
 </p>
 <br>
 
+## Bonus Step - Deploy your local app to the Cloud
+If you want to keep your application running all the time, 
+you'll want to deploy it to the cloud. The goal is to deploy
+something like this: http://blockchainbeans2.mybluemix.net/
+
+To do this, please follow the guide [here:](https://medium.com/loopback/deploy-your-first-loopback4-application-to-ibm-cloud-2e671ac06b6c)
+
+
 ## Conclusion
 
 So yes! Go ahead and run the /POST transactions as shown in 
