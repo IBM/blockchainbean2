@@ -61,7 +61,7 @@ async function main() {
         console.log('Successfully registered and enrolled admin user ' + userName + ' and imported it into the wallet');
 
     } catch (error) {
-        console.error('Failed to register user ' + userName + ': ${error}');
+        console.error(`Failed to register user ` + userName + : `${error}`);
         process.exit(1);
     }
 }
