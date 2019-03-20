@@ -36,9 +36,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 # Flow Description
 1. User submits transactions in the web UI.
-
 2. The transaction is submitted to the Cloud Foundry application, connected to the IBM Blockchain Platform 2.0.
-
 3. If the transaction conforms to the business logic, the ledger is updated and a block is appended to our chain.
 
 # Watch the Video - Create a fair trade supply network with Hyperledger Fabric 1.4 (Cloud)
