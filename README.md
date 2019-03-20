@@ -502,8 +502,9 @@ Then click the blue Execute button under the request body. If all goes well, you
 
 If all went well, you can now go into your blockchain network, click on the channel, and then
 you should see the block height increased, and if you click on the last block, you should
-see the latest JSON that we inputted being written to the blockchain. **Note:** the gif below
-shows a different transaction/smart contract - yours should show Grower-0201 being written to the ledger
+see the latest JSON that we inputted being written to the blockchain. **Note:** The gif shows
+how to get to your channel and transaction overview. Your transaction data should be different - 
+it should show updating the ledger with the information of `Grower-0201`.
 
 <br>
 <p align="center">
