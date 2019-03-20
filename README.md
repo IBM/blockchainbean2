@@ -513,7 +513,7 @@ it should show updating the ledger with the information of `Grower-0201`.
 <br>
 
 The rest of the commands for uploading supply chain documents can be 
-found [here](https://github.com/horeaporutiu/blockchainbean2/blob/master/docs/run-local.md#add-members-to-the-network)
+found [here.](https://github.com/horeaporutiu/blockchainbean2/blob/master/docs/run-local.md#add-members-to-the-network)
 
 ## Bonus Step - Deploy your local app to the Cloud
 If you want to keep your application running all the time, 
@@ -535,7 +535,7 @@ So yes! Go ahead and run the /POST transactions as shown in
 3. You learned how to update the ledger by submitting transactions to the network.
 4. You learned that Hyperledger stores data as key-value pairs, so to look up data on the network, you need to pass in a key that has a value associated with it. We did that by running the query method.
 5. You learned how to create a Kubernetes Cluster and IBM Blockchain service and to connect our client Loopback application to our cloud service via the connection profile we downloaded.
-6, You learned how to view the ledger of a specific channel, by clicking on the channel, the ledger, and then the individual transactions. 
+6. You learned how to view the ledger of a specific channel, by clicking on the channel, the ledger, and then the individual transactions. 
 
 So at this point, you know more than me! Hopefully you feel pretty good at this point, and can dive a bit deeper into other, more complex topics, such as how to scale your network, how to optimize performance, etc. But for now, you know all of the basics to run a supply chain network on Hyperledger Fabric, both locally, and on the Cloud.
 
