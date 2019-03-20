@@ -59,21 +59,15 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ## Prerequisites
 
-**This pattern assumes you have an IBM Cloud account, VSCode and IBM Blockchain Platform Extension for VSCode installed.** 
+This pattern assumes you have an **IBM Cloud account**, **VSCode** and **IBM Blockchain Platform Extension for VSCode installed**
 
 - [IBM Cloud account](https://cloud.ibm.com/registration/?target=%2Fdashboard%2Fapps)
 - [Install VSCode](https://code.visualstudio.com/download)
 - [Install IBM Blockchain Platform Extension for VSCode](https://github.com/IBM-Blockchain/blockchain-vscode-extension)
 - [Node v8.x or greater and npm v5.x or greater](https://nodejs.org/en/download/)
 
-**Note: If you only want to run locally and or 
-see how to submit supply chain documents to 
-this app, you can find the 
-rest of the steps [here](./docs/run-local.md). The 
-rest of this guide will focus on cloud deployment**
-
 # Steps (Cloud Deployment)
-
+> To run a local network, you can find steps [here](./docs/run-local.md).
 1. [Clone the Repo](#step-1-clone-the-repo)
 2. [Install Dependencies](#step-2-install-dependencies)
 3. [Package Contract](#step-3-package-contract)
