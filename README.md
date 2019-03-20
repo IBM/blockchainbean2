@@ -1,6 +1,6 @@
 <!-- [![Build Status](https://travis-ci.org/IBM/blockchainbean.svg?branch=master)](https://travis-ci.org/IBM/blockchainbean) -->
 
-# Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform 2.0 Beta
+# Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform V2 Beta Platform 2.0 Beta
 
 To try the supply chain network API - go here: http://blockchainbeans2.mybluemix.net/
 
@@ -18,7 +18,7 @@ page. Hint, try cupId 'NJB123' for the result shown below.
 
 All documents that were used in the supply chain are available online, and can be found by clicking the view the blockchain button at https://www.ibm.com/thought-leadership/blockchainbean/
 
-In this code pattern we will create a blockchain app that increases visibility and efficiency in the supply chain of a coffee retailer using IBM Blockchain Platform 2.0 Beta. We will use different transactions to show different possible actions for the different participants in the supply chain. This sample application will record all transactions on the IBM Blockchain V2 Beta, and enable a coffee retailer to ensure the customer that their coffee is organic and fair-trade. The code pattern can be useful to developers that are looking into learning more about creating applications that integrate supply chains with Hyperledger Fabric.
+In this code pattern we will create a blockchain app that increases visibility and efficiency in the supply chain of a coffee retailer using IBM Blockchain Platform V2 Beta. We will use different transactions to show different possible actions for the different participants in the supply chain. This sample application will record all transactions on the IBM Blockchain Platform V2 Beta, and enable a coffee retailer to ensure the customer that their coffee is organic and fair-trade. The code pattern can be useful to developers that are looking into learning more about creating applications that integrate supply chains with Hyperledger Fabric.
 
 When the reader has completed this code pattern, they will understand how to:
 
@@ -36,11 +36,11 @@ When the reader has completed this code pattern, they will understand how to:
 
 # Flow Description
 1. User submits transactions in the web UI.
-2. The transaction is submitted to the Cloud Foundry application, connected to the IBM Blockchain Platform 2.0.
+2. The transaction is submitted to the Cloud Foundry application, connected to the IBM Blockchain Platform V2 Beta.
 3. If the transaction conforms to the business logic, the ledger is updated and a block is appended to our chain.
 
 # Included components
-*	[IBM Blockchain Platform 2.0](https://console.bluemix.net/docs/services/blockchain/howto/ibp-v2-deploy-iks.html#ibp-v2-deploy-iks) gives you total control of your blockchain network with a user interface that can simplify and accelerate your journey to deploy and manage blockchain components on the IBM Cloud Kubernetes Service.
+*	[IBM Blockchain Platform V2 Beta](https://console.bluemix.net/docs/services/blockchain/howto/ibp-v2-deploy-iks.html#ibp-v2-deploy-iks) gives you total control of your blockchain network with a user interface that can simplify and accelerate your journey to deploy and manage blockchain components on the IBM Cloud Kubernetes Service.
 *	[IBM Cloud Kubernetes Service](https://www.ibm.com/cloud/container-service) gcreates a cluster of compute hosts and deploys highly available containers. A Kubernetes cluster lets you securely manage the resources that you need to quickly deploy, update, and scale applications.
 * [IBM Blockchain Platform Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform) is designed to assist users in developing, testing, and deploying smart contracts -- including connecting to Hyperledger Fabric environments.
 
@@ -135,7 +135,7 @@ minutes to provision, so please be patient!</b>
 </p>
 <br>
 
-* Create the [IBM Blockchain Platform 2.0](https://console.bluemix.net/catalog/services/blockchain/) service on the IBM Cloud.  You can find the service in the `Catalog`, and give a name.
+* Create the [IBM Blockchain Platform V2 Beta](https://console.bluemix.net/catalog/services/blockchain/) service on the IBM Cloud.  You can find the service in the `Catalog`, and give a name.
 
 <br>
 <p align="center">
@@ -143,7 +143,7 @@ minutes to provision, so please be patient!</b>
 </p>
 <br>
 
-* After your kubernetes cluster is up and running, you can deploy your IBM Blockchain Platform on the cluster.  The service walks through few steps and finds your cluster on the IBM Cloud to deploy the service on.
+* After your kubernetes cluster is up and running, you can deploy your IBM Blockchain Platform V2 Beta on the cluster.  The service walks through few steps and finds your cluster on the IBM Cloud to deploy the service on.
 
 <br>
 <p align="center">
@@ -528,13 +528,13 @@ To do this, please follow the guide [here:](https://medium.com/loopback/deploy-y
 So yes! Go ahead and run the /POST transactions as shown in 
 [these steps](https://github.com/horeaporutiu/blockchainbean2/blob/master/docs/run-local.md#step-6-submit-transactions), and
  everything will be stored on the IBM Blockchain Platform. So now, you are 
- officialy done with this tutorial. So what did you learn?
+ officially done with this tutorial. So what did you learn?
 
 - How to create a smart contract project with the IBM Blockchain VSCode extension.
 - How to deploy your smart contract on a local Hyperledger Fabric network.
 - How to update the ledger by submitting transactions to the network.
 - Hyperledger stores data as key-value pairs, so to look up data on the network, you need to pass in a key that has a value associated with it. We did that by running the query method.
-- How to create a Kubernetes Cluster and IBM Blockchain service and to connect our client Loopback application to our cloud service via the connection profile we downloaded.
+- How to create a Kubernetes Cluster and IBM Blockchain Platform V2 Beta service and to connect our client Loopback application to our cloud service via the connection profile we downloaded.
 - How to view the ledger of a specific channel, by clicking on the channel, the ledger, and then the individual transactions. 
 
 So at this point, you know more than me! Hopefully you feel pretty good at this point, and can dive a bit deeper into other, more complex topics, such as how to scale your network, how to optimize performance, etc. But for now, you know all of the basics to run a supply chain network on Hyperledger Fabric, both locally, and on the Cloud.
