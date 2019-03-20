@@ -27,6 +27,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 * Create and use a (free) Kubernetes Cluster
 * Deploy a Node.js app in the cloud that will interact with our smart contract
 
+# Architecture Diagram
 <br>
 <p align="center">
   <img src="docs/app-architecture.png">
