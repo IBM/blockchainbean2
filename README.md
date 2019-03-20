@@ -530,12 +530,12 @@ So yes! Go ahead and run the /POST transactions as shown in
  everything will be stored on the IBM Blockchain Platform. So now, you are 
  officialy done with this tutorial. So what did you learn?
 
-- You learned how to create a smart contract project with the IBM Blockchain VSCode extension.
-- You learned how to deploy your smart contract on a local Hyperledger Fabric network.
-- You learned how to update the ledger by submitting transactions to the network.
-- You learned that Hyperledger stores data as key-value pairs, so to look up data on the network, you need to pass in a key that has a value associated with it. We did that by running the query method.
-- You learned how to create a Kubernetes Cluster and IBM Blockchain service and to connect our client Loopback application to our cloud service via the connection profile we downloaded.
-- You learned how to view the ledger of a specific channel, by clicking on the channel, the ledger, and then the individual transactions. 
+- How to create a smart contract project with the IBM Blockchain VSCode extension.
+- How to deploy your smart contract on a local Hyperledger Fabric network.
+- How to update the ledger by submitting transactions to the network.
+- Hyperledger stores data as key-value pairs, so to look up data on the network, you need to pass in a key that has a value associated with it. We did that by running the query method.
+- How to create a Kubernetes Cluster and IBM Blockchain service and to connect our client Loopback application to our cloud service via the connection profile we downloaded.
+- How to view the ledger of a specific channel, by clicking on the channel, the ledger, and then the individual transactions. 
 
 So at this point, you know more than me! Hopefully you feel pretty good at this point, and can dive a bit deeper into other, more complex topics, such as how to scale your network, how to optimize performance, etc. But for now, you know all of the basics to run a supply chain network on Hyperledger Fabric, both locally, and on the Cloud.
 
