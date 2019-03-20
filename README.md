@@ -39,6 +39,16 @@ When the reader has completed this Code Pattern, they will understand how to:
 2. The transaction is submitted to the Cloud Foundry application, connected to the IBM Blockchain Platform 2.0.
 3. If the transaction conforms to the business logic, the ledger is updated and a block is appended to our chain.
 
+# Included components
+*	[IBM Blockchain Platform 2.0](https://console.bluemix.net/docs/services/blockchain/howto/ibp-v2-deploy-iks.html#ibp-v2-deploy-iks) gives you total control of your blockchain network with a user interface that can simplify and accelerate your journey to deploy and manage blockchain components on the IBM Cloud Kubernetes Service.
+*	[IBM Cloud Kubernetes Service](https://www.ibm.com/cloud/container-service) gcreates a cluster of compute hosts and deploys highly available containers. A Kubernetes cluster lets you securely manage the resources that you need to quickly deploy, update, and scale applications.
+* [IBM Blockchain Platform Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform) is designed to assist users in developing, testing, and deploying smart contracts -- including connecting to Hyperledger Fabric environments.
+
+## Featured technologies
++ [Hyperledger Fabric v1.4](https://hyperledger-fabric.readthedocs.io) is a platform for distributed ledger solutions, underpinned by a modular architecture that delivers high degrees of confidentiality, resiliency, flexibility, and scalability.
++ [Node.js](https://nodejs.org) is an open source, cross-platform JavaScript run-time environment that executes server-side JavaScript code.
++ [Loopback 4](https://v4.loopback.io/) LoopBack is a highly-extensible, open-source Node.js framework that enables you to: Create dynamic end-to-end REST APIs with little or no coding. Access data from major relational databases, MongoDB, SOAP and REST APIs. Incorporate model relationships and access controls for complex APIs.
+
 # Watch the Video - Create a fair trade supply network with Hyperledger Fabric 1.4 (Cloud)
 
 [![](docs/ibpVideo.png)](https://www.youtube.com/watch?v=8wtHsD7-kS4)
@@ -47,47 +57,14 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 [![](docs/local.png)](https://www.youtube.com/watch?v=mG2TCIPlvk0)
 
+## Prerequisites
 
-**This pattern assumes you have VSCode and IBM Blockchain Platform Extension for VSCode installed.** 
+**This pattern assumes you have an IBM Cloud account, VSCode and IBM Blockchain Platform Extension for VSCode installed.** 
 
+- [IBM Cloud account](https://cloud.ibm.com/registration/?target=%2Fdashboard%2Fapps)
 - [Install VSCode](https://code.visualstudio.com/download)
 - [Install IBM Blockchain Platform Extension for VSCode](https://github.com/IBM-Blockchain/blockchain-vscode-extension)
-
-
-## Requirements
-
-We will use the 
-[IBM Blockchain Platform Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform) to package our smart contract. 
-
-You will need the following installed in order to use the extension:
-- [VSCode version 1.31 or greater](https://code.visualstudio.com)
 - [Node v8.x or greater and npm v5.x or greater](https://nodejs.org/en/download/)
-- [Yeoman (yo) v2.x](http://yeoman.io/)
-- [Docker version v17.06.2-ce or greater](https://www.docker.com/get-docker)
-- [Docker Compose v1.14.0 or greater](https://docs.docker.com/compose/install/)
-
-> ⚠ Please note: From version 0.1.0+ for the IBM Blockchain Platform VSCode Extension, your smart contract package.json should depend on at least fabric-contract@1.4.0-beta2. This is only required for smart contracts not created using version 0.1.0+ of this extension.
-
-If you are using Windows, you must also ensure the following:
-- Your version of Windows supports Hyper-V and Docker:
-  - Windows 10 Enterprise, Pro, or Education with 1607 Anniversary Update or later
-- Docker for Windows is configured to use Linux containers (this is the default)
-- You have installed the C++ Build Tools for Windows from [windows-build-tools](https://github.com/felixrieseberg/windows-build-tools#windows-build-tools)
-- You have installed OpenSSL v1.0.2 from [Win32 OpenSSL](http://slproweb.com/products/Win32OpenSSL.html)
-  - Install the normal version, not the version marked as "light"
-  - Install the Win32 version into `C:\OpenSSL-Win32` on 32-bit systems
-  - Install the Win64 version into `C:\OpenSSL-Win64` on 64-bit systems
-
-If you require sudo/root to install npm modules, the extension won't be able to automatically install the generator that is used to create a smart contract project. You will need to run the following command to install the dependencies:
-
-`npm install -g yo generator-fabric`
-
-You can check your installed versions by running the following commands from a terminal:
-- `node --version`
-- `npm --version`
-- `yo --version`
-- `docker --version`
-- `docker-compose --version`
 
 **Note: If you only want to run locally and or 
 see how to submit supply chain documents to 
@@ -541,6 +518,16 @@ GREAT JOB! YOU DID IT! :)
 
 And when you create the cool new startup unicorn after learning a bunch from this tutorial, don't forget to give me, or IBM Developer some credit :) 
 
+## Troubleshooting
+If you are getting errors with your IBM Blockchain VSCode extension, ensure 
+you have all prerequisites installed here: https://github.com/IBM-Blockchain/blockchain-vscode-extension#requirements
+
 ## Related Links
 * [Hyperledger Fabric Docs](http://hyperledger-fabric.readthedocs.io/en/latest/)
 * [IBM Code Patterns for Blockchain](https://developer.ibm.com/patterns/category/blockchain/)
+
+## License
+This code pattern is licensed under the Apache Software License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
+
+[Apache Software License (ASL) FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
+
