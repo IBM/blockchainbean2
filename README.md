@@ -18,9 +18,9 @@ page. Hint, try cupId 'NJB123' for the result shown below.
 
 All documents that were used in the supply chain are available online, and can be found by clicking the view the blockchain button at https://www.ibm.com/thought-leadership/blockchainbean/
 
-In this code pattern we will create a blockchain app that increases visibility and efficiency in the supply chain of a coffee retailer using IBM Blockchain Platform 2.0 Beta. We will use different transactions to show different possible actions for the different participants in the supply chain. This sample application will record all transactions on the IBM Blockchain V2 Beta, and enable a coffee retailer to ensure the customer that their coffee is organic and fair-trade. The Code Pattern can be useful to developers that are looking into learning more about creating applications that integrate supply chains with Hyperledger Fabric.
+In this code pattern we will create a blockchain app that increases visibility and efficiency in the supply chain of a coffee retailer using IBM Blockchain Platform 2.0 Beta. We will use different transactions to show different possible actions for the different participants in the supply chain. This sample application will record all transactions on the IBM Blockchain V2 Beta, and enable a coffee retailer to ensure the customer that their coffee is organic and fair-trade. The code pattern can be useful to developers that are looking into learning more about creating applications that integrate supply chains with Hyperledger Fabric.
 
-When the reader has completed this Code Pattern, they will understand how to:
+When the reader has completed this code pattern, they will understand how to:
 
 * Interact with the (free) IBM Blockchain Platform V2 Beta
 * Build a blockchain back-end using Hyperledger Fabric
@@ -470,19 +470,48 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
     ```
 
 
-You can find the app running at http://localhost:3000/explorer
-
+You can find the app running at http://localhost:3000/explorer  If all goes well, you should see something like the picture below: 
 
 ![packageFile](/docs/loopback.png)
+To get started submitting our first transaction on the network, we can update the ledger 
+with some of our suppliers info, such as their address, their uniqueId, and their 
+organization. To do this, first  click on `GrowerController`. You should see the Controller 
+expand with the GET/POST methods. Click on the green POST/Grower button and then `Try it out` to 
+the right of the `POST/Grower` button. This will enable you to write in a request body. Go ahead 
+and copy and paste the following JSON in to the request body. P.S. (I have made all the commands 
+available in the commands.txt file).
 
+```json
+{
+  "$class": "org.ibm.coffee.Grower",
+  "isFairTrade": true,
+  "growerId": "Grower-0201",
+  "organization": "Ethiopia Gedeb 1 Banko Gotiti GrainPro",
+  "address": {
+    "$class": "org.ibm.coffee.Address",
+    "city": "Gedeb",
+    "country": "Ethiopia",
+    "street": "N/A",
+    "zip": "N/A"
+  }
+}
+```
+Then click the blue Execute button under the request body. If all goes well, you should see something similar to the image below:
 
-You can go to the IBM Blockchain Platform v2 console to monitor your users and get information on your channel including the blocks added.
+![packageFile](/docs/grower.png)
+
+If all went well, you can now go into your blockchain network, click on the channel, and then
+you should see the block height increased, and if you click on the last block, you should
+see the latest JSON that we inputted being written to the blockchain.
 
 <br>
 <p align="center">
   <img src="docs/doc-gifs/channel-blocks.gif">
 </p>
 <br>
+
+The rest of the commands for uploading supply chain documents can be 
+found [here](https://github.com/horeaporutiu/blockchainbean2/blob/master/docs/run-local.md#add-members-to-the-network)
 
 ## Bonus Step - Deploy your local app to the Cloud
 If you want to keep your application running all the time, 
