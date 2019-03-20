@@ -476,7 +476,7 @@ You can find the app running at http://localhost:3000/explorer  If all goes well
 To get started submitting our first transaction on the network, we can update the ledger 
 with some of our suppliers info, such as their address, their uniqueId, and their 
 organization. To do this, first  click on `GrowerController`. You should see the Controller 
-expand with the GET/POST methods. Click on the green POST/Grower button and then `Try it out` to 
+expand with the GET/POST methods. Click on the green `POST/Grower` button and then `Try it out` to 
 the right of the `POST/Grower` button. This will enable you to write in a request body. Go ahead 
 and copy and paste the following JSON in to the request body. P.S. (I have made all the commands 
 available in the commands.txt file).
@@ -502,7 +502,8 @@ Then click the blue Execute button under the request body. If all goes well, you
 
 If all went well, you can now go into your blockchain network, click on the channel, and then
 you should see the block height increased, and if you click on the last block, you should
-see the latest JSON that we inputted being written to the blockchain.
+see the latest JSON that we inputted being written to the blockchain. **Note:** the gif below
+shows a different transaction/smart contract - yours should show Grower-0201 being written to the ledger
 
 <br>
 <p align="center">
