@@ -1,6 +1,6 @@
 <!-- [![Build Status](https://travis-ci.org/IBM/blockchainbean.svg?branch=master)](https://travis-ci.org/IBM/blockchainbean) -->
 
-# Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform V2 Beta Platform 2.0 Beta
+# Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform V2 Beta
 
 To try the supply chain network API - go here: http://blockchainbeans2.mybluemix.net/
 
