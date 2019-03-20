@@ -535,3 +535,7 @@ So at this point, you know more than me! Hopefully you feel pretty good at this 
 GREAT JOB! YOU DID IT! :) 
 
 And when you create the cool new startup unicorn after learning a bunch from this tutorial, don't forget to give me, or IBM Developer some credit :) 
+
+## Related Links
+* [Hyperledger Fabric Docs](http://hyperledger-fabric.readthedocs.io/en/latest/)
+* [IBM Code Patterns for Blockchain](https://developer.ibm.com/patterns/category/blockchain/)
