@@ -35,9 +35,12 @@ When the reader has completed this code pattern, they will understand how to:
 <br>
 
 # Flow Description
-1. User submits transactions in the web UI.
-2. The transaction is submitted to the Cloud Foundry application, connected to the IBM Blockchain Platform V2 Beta.
-3. If the transaction conforms to the business logic, the ledger is updated and a block is appended to our chain.
+1. The blockchain operator sets up the IBM Blockchain Platform 2.0 service.
+2. The IBM Blockchain Platform 2.0 creates a Hyperledger Fabric network on an IBM Kubernetes 
+Service, and the operator installs and instantiates the smart contract on the network.
+3. The Node.js application server uses the Fabric SDK to interact with the deployed network on IBM Blockchain Platform 2.0 and creates APIs for a web client.
+4. The Loopback 4 client uses the Node.js application API to interact with the network.
+5. The user interacts with the Loopback 4 web interface to update and query the blockchain ledger and state.
 
 # Included components
 *	[IBM Blockchain Platform V2 Beta](https://console.bluemix.net/docs/services/blockchain/howto/ibp-v2-deploy-iks.html#ibp-v2-deploy-iks) gives you total control of your blockchain network with a user interface that can simplify and accelerate your journey to deploy and manage blockchain components on the IBM Cloud Kubernetes Service.
