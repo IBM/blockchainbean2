@@ -1,0 +1,4 @@
+---
+applications:
+ - name: blockchainean2
+   memory: 256M
