@@ -44,7 +44,7 @@ Service, and the operator installs and instantiates the smart contract on the ne
 
 # Included components
 *	[IBM Blockchain Platform V2 Beta](https://console.bluemix.net/docs/services/blockchain/howto/ibp-v2-deploy-iks.html#ibp-v2-deploy-iks) gives you total control of your blockchain network with a user interface that can simplify and accelerate your journey to deploy and manage blockchain components on the IBM Cloud Kubernetes Service.
-*	[IBM Cloud Kubernetes Service](https://www.ibm.com/cloud/container-service) gcreates a cluster of compute hosts and deploys highly available containers. A Kubernetes cluster lets you securely manage the resources that you need to quickly deploy, update, and scale applications.
+*	[IBM Cloud Kubernetes Service](https://www.ibm.com/cloud/container-service) creates a cluster of compute hosts and deploys highly available containers. A Kubernetes cluster lets you securely manage the resources that you need to quickly deploy, update, and scale applications.
 * [IBM Blockchain Platform Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform) is designed to assist users in developing, testing, and deploying smart contracts -- including connecting to Hyperledger Fabric environments.
 
 ## Featured technologies
@@ -108,7 +108,7 @@ Right-click under your folders in your workspace area and then click *Add Folder
 ![packageFile](/docs/addSmartContract.png)
 
  Next, we have to package the smart contract. Click on the *F1* button on your keyboard,
- which will bring up the VSCode command pallete. From there, navigate and click on `Package a Smart Contract Project`.
+ which will bring up the VSCode command palette. From there, navigate and click on `Package a Smart Contract Project`.
 ![packageFile](/docs/pack.png)
 
 
