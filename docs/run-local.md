@@ -134,6 +134,44 @@ Leave the arguments blank, and hit *enter*
 different is that we will use queries to see the ledger locally, whereas on cloud 
 we can view the ledger via the block explorer on IBM Blockchain Platform *
 
+#### Enroll admin
+  - First, navigate to the `server` directory, and install the node dependencies.
+    ```bash
+    cd server
+    npm install
+    ```
+  - ⚠️ if you get a grpc error run:
+    ```bash
+    npm rebuild
+    ```
+  
+  - Run the `enrollAdmin.js` script
+    ```bash
+    node enrollAdmin.js
+    ```
+
+  - You should see the following in the terminal:
+    ```bash
+    msg: Successfully enrolled admin user admin and imported it into the wallet
+    ```
+
+* #### Register User
+  - Run the `registerUser.js` script.
+    ```bash
+    node registerUser.js
+    ```
+
+  - You should see the following in the terminal:
+    ```bash
+    Successfully registered and enrolled admin user user1 and imported it into the wallet
+    ```
+  - If you get an error such as this 
+  
+  ```Error: fabric-ca request register failed with errors [[{"code":0,"message":"Registration of 'user1' failed: Identity 'user1' is already registered"}]]```
+
+  go ahead and change the user in **config.json** file, you can use any
+  username you want.
+
 
  Nice. We're pretty much ready to submit transactions on our contract. Go ahead and go 
  into your web-app directory and run the query script with the commands shown below. 
