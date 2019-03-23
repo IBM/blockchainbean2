@@ -473,7 +473,7 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
     ```
 
 
-You can find the app running at http://localhost:3000/explorer  If all goes well, you should see something like the picture below: 
+You can find the app running at http://localhost:8080/explorer  If all goes well, you should see something like the picture below: 
 
 ![packageFile](/docs/loopback.png)
 To get started submitting our first transaction on the network, we can update the ledger 
@@ -524,6 +524,8 @@ you'll want to deploy it to the cloud. The goal is to deploy
 something like this: http://blockchainbeans2.mybluemix.net/
 
 To do this, please follow the guide [here:](https://medium.com/loopback/deploy-your-first-loopback4-application-to-ibm-cloud-2e671ac06b6c)
+
+
 
 
 ## Conclusion

@@ -206,7 +206,7 @@ blockchainbean2$ cd web-app
 web-app$ npm start
 ```
 
-In your browser, go to http://localhost:3000/explorer/ If all goes well, you should 
+In your browser, go to http://localhost:8080/explorer/ If all goes well, you should 
 see something like the picture below:
 ![packageFile](/docs/loopback.png)
 
