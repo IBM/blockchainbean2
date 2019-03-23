@@ -536,6 +536,16 @@ the app name to whatever you wish. I called mine testApp123667.
 (I use `cf login --sso` since I have a IBMid).
 3. Once you are logged in, pick your org and space where you want to deploy
 you app. Your org and space will be different than mine.
+<br>
+<p align="center">
+  <img src="docs/doc-gifs/deploy.gif">
+</p>
+<br>
+4. Lastly, use `cf push` to push your newly named app to the IBM Cloud. Once 
+that app is deployed, go ahead and open the URL, and submit a /POST/Grower 
+transaction.
+If everything went well, you should have a app running in the Cloud, with 
+all transactions logged on the IBM Blockchain Platform. Congrats!
 
 
 To do this, please follow the guide [here:](https://medium.com/loopback/deploy-your-first-loopback4-application-to-ibm-cloud-2e671ac06b6c)
