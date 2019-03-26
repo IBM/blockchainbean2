@@ -266,7 +266,7 @@ except add in the following json:
 }
 ```
 
-Same thing with the shipper now:
+Same thing with the `/POST/Shipper` now:
 
 ```
 {
@@ -283,7 +283,7 @@ Same thing with the shipper now:
 }
 ```
 
-And the retailer: 
+And the retailer i.e. `/POST/retailer`: 
 ```
 {
   "$class": "org.ibm.coffee.Retailer",
@@ -299,7 +299,7 @@ And the retailer:
 }
 ```
 
-And last but not least, the regulator :) 
+And last but not least, the regulator :) (`/POST/regulator`) 
 
 ```
 {
@@ -398,7 +398,7 @@ Next, let's play the part of the shipper. In a live network the shipper
 would authenticate into the network, and would be allow to /POST (update) 
 the ledger with the packing list controller. 
 
-Let's do a /POST/SubmitPackingListController with the following json,
+Let's do a `/POST/SubmitPackingListController` with the following json,
 but don't forget to use ***YOUR OWN batchId*** :) :
 
 ```
@@ -460,7 +460,7 @@ Ok. Enough talk. More data.
 Let's submit a transaction that represents the port authority receiving the shipment
 after reaching its destination. 
 
-Go to /POST/SubmitInboundWeightTallyController and paste the following JSON, except 
+Go to `/POST/SubmitInboundWeightTallyController` and paste the following JSON, except 
 with your own batchId:
 
 ```
