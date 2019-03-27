@@ -2,7 +2,22 @@
 
 # Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform V2 Beta
 
-To try the supply chain network API - go here: http://blockchainbeans2.mybluemix.net/ **Note - this is being updated, sorry for any inconvenience.**
+To try the supply chain network API - go here: http://blockchainbeans2.mybluemix.net/ 
+- To view all of the data that is currently in the world state (the database that each peer
+holds) go to /explorer and then go down the page until you see `QueryController`. Click on `GET/
+query/queryAll`. Then
+click on `Try it out` and then `Execute`. 
+
+<!-- 
+What is returned is the current state of the 
+world state - i.e. current state of all of the assets that are currently in each of the
+peer's database. You'll see that data is stored in key-value pairs and you'll see a lot of 
+the supply chain details that are relevant for the retailer to assure the customer that 
+the their coffee is fair-trade certified. 
+
+If you wanted to query for a particular batch of coffee, you can go ahead and 
+query for a particular key - in this instance, the cupId. Go to `/query/{key}`
+and query for  -->
 
 This code pattern is based on a recent proof-of-concept developed in collaboration with a coffee roasting company that was nice enough to let us use their supply-chain documents. The finished product of this code pattern is a cloud-based blockchain API, that any other UI app can call. An example UI app that leverages our blockchain API can be found [here](https://www.ibm.com/thought-leadership/blockchainbean/).
 
