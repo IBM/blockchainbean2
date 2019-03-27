@@ -6,7 +6,14 @@ To try the supply chain network API - go here: http://blockchainbeans2.mybluemix
 - To view all of the data that is currently in the world state (the database that each peer
 holds) go to /explorer and then go down the page until you see `QueryController`. Click on `GET/
 query/queryAll`. Then
-click on `Try it out` and then `Execute`. 
+click on `Try it out` and then `Execute`. You should see something like the image below: 
+
+<br>
+<p align="center">
+  <img src="docs/queryAll.png">
+</p>
+<br>
+
 
 <!-- 
 What is returned is the current state of the 
