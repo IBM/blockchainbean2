@@ -63,10 +63,10 @@ export class AddCoffeeController {
    * @param filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})
    * @returns Request was successful
    */
-  @operation('get', '/addCoffee')
-  async addCoffeeFind(@param({ name: 'filter', in: 'query' }) filter: string): Promise<AddCoffee[]> {
-    throw new Error('Not implemented');
-  }
+  // @operation('get', '/addCoffee')
+  // async addCoffeeFind(@param({ name: 'filter', in: 'query' }) filter: string): Promise<AddCoffee[]> {
+  //   throw new Error('Not implemented');
+  // }
 
   /**
    *
@@ -76,10 +76,10 @@ export class AddCoffeeController {
    * @param filter Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})
    * @returns Request was successful
    */
-  @operation('get', '/addCoffee/{id}')
-  async addCoffeeFindById(@param({ name: 'id', in: 'path' }) id: string, @param({ name: 'filter', in: 'query' }) filter: string): Promise<AddCoffee> {
-    throw new Error('Not implemented');
-  }
+  // @operation('get', '/addCoffee/{id}')
+  // async addCoffeeFindById(@param({ name: 'id', in: 'path' }) id: string, @param({ name: 'filter', in: 'query' }) filter: string): Promise<AddCoffee> {
+  //   throw new Error('Not implemented');
+  // }
 
 }
 

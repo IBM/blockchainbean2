@@ -62,10 +62,10 @@ export class GrowerController {
    * @param filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})
    * @returns Request was successful
    */
-  @operation('get', '/Grower')
-  async growerFind(@param({ name: 'filter', in: 'query' }) filter: string): Promise<Grower[]> {
-    throw new Error('Not implemented');
-  }
+  // @operation('get', '/Grower')
+  // async growerFind(@param({ name: 'filter', in: 'query' }) filter: string): Promise<Grower[]> {
+  //   throw new Error('Not implemented');
+  // }
 
   /**
    *
@@ -74,12 +74,12 @@ export class GrowerController {
    * @param id Model id
    * @returns Request was successful
    */
-  @operation('head', '/Grower/{id}')
-  async growerExists(@param({ name: 'id', in: 'path' }) id: string): Promise<{
-    exists?: boolean;
-  }> {
-    throw new Error('Not implemented');
-  }
+  // @operation('head', '/Grower/{id}')
+  // async growerExists(@param({ name: 'id', in: 'path' }) id: string): Promise<{
+  //   exists?: boolean;
+  // }> {
+  //   throw new Error('Not implemented');
+  // }
 
   /**
    *
@@ -89,30 +89,30 @@ export class GrowerController {
    * @param filter Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})
    * @returns Request was successful
    */
-  @operation('get', '/Grower/{id}')
-  async growerFindById(@param({ name: 'id', in: 'path' }) id: string, @param({ name: 'filter', in: 'query' }) filter: string): Promise<Grower> {
-    let networkObj = await blockchainClient.connectToNetwork();
-    let dataForQuery = {
-      function: 'query',
-      id: id,
-      contract: networkObj.contract,
-      network: networkObj.network
-    };
+  // @operation('get', '/Grower/{id}')
+  // async growerFindById(@param({ name: 'id', in: 'path' }) id: string, @param({ name: 'filter', in: 'query' }) filter: string): Promise<any> {
+  //  let networkObj = await blockchainClient.connectToNetwork();
+  //   let dataForQuery = {
+  //     function: 'query',
+  //     id: id,
+  //     contract: networkObj.contract,
+  //     network: networkObj.network
+  //   };
 
-    console.log('before blockchainClient.queryByKey')
-    let result = await blockchainClient.queryByKey(dataForQuery);
-    console.log(`lookup by key ${id}`);
-    console.log('result after calling client.queryByKey: ')
-    console.log(result)
-    if (result.id) {
-      var rez = JSON.parse(result.toString());
-      console.log(rez)
-      let address = new Address({ city: rez.address, country: rez.address, street: rez.address });
-      let grower = new Grower({ growerId: rez.id, organization: rez.organization, address: address });
-      return grower;
-    }
-    return result;
-  }
+  //   console.log('before blockchainClient.queryByKey')
+  //   let result = await blockchainClient.queryByKey(dataForQuery);
+  //   console.log(`lookup by key ${id}`);
+  //   console.log('result after calling client.queryByKey: ')
+  //   console.log(result)
+  //   if (result.id) {
+  //     var rez = JSON.parse(result.toString());
+  //     console.log(rez)
+  //     let address = new Address({ city: rez.address, country: rez.address, street: rez.address });
+  //     let grower = new Grower({ growerId: rez.id, organization: rez.organization, address: address });
+  //     return grower;
+  //   }
+  //   return result;
+  // }
 
   /**
    *
@@ -122,10 +122,10 @@ export class GrowerController {
    * @param id Model id
    * @returns Request was successful
    */
-  @operation('put', '/Grower/{id}')
-  async growerReplaceById(@requestBody() requestBody: Grower, @param({ name: 'id', in: 'path' }) id: string): Promise<Grower> {
-    throw new Error('Not implemented');
-  }
+  // @operation('put', '/Grower/{id}')
+  // async growerReplaceById(@requestBody() requestBody: Grower, @param({ name: 'id', in: 'path' }) id: string): Promise<Grower> {
+  //   throw new Error('Not implemented');
+  // }
 
   /**
    *
@@ -134,12 +134,12 @@ export class GrowerController {
    * @param id Model id
    * @returns Request was successful
    */
-  @operation('delete', '/Grower/{id}')
-  async growerDeleteById(@param({ name: 'id', in: 'path' }) id: string): Promise<{
+  // @operation('delete', '/Grower/{id}')
+  // async growerDeleteById(@param({ name: 'id', in: 'path' }) id: string): Promise<{
 
-  }> {
-    throw new Error('Not implemented');
-  }
+  // }> {
+  //   throw new Error('Not implemented');
+  // }
 
 }
 

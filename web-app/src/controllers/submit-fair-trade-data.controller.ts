@@ -71,10 +71,10 @@ export class SubmitFairTradeDataController {
    * @param filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})
    * @returns Request was successful
    */
-  @operation('get', '/submitFairTradeData')
-  async submitFairTradeDataFind(@param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitFairTradeData[]> {
-    throw new Error('Not implemented');
-  }
+  // @operation('get', '/submitFairTradeData')
+  // async submitFairTradeDataFind(@param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitFairTradeData[]> {
+  //   throw new Error('Not implemented');
+  // }
 
   /**
    *
@@ -84,10 +84,10 @@ export class SubmitFairTradeDataController {
    * @param filter Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})
    * @returns Request was successful
    */
-  @operation('get', '/submitFairTradeData/{id}')
-  async submitFairTradeDataFindById(@param({ name: 'id', in: 'path' }) id: string, @param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitFairTradeData> {
-    throw new Error('Not implemented');
-  }
+  // @operation('get', '/submitFairTradeData/{id}')
+  // async submitFairTradeDataFindById(@param({ name: 'id', in: 'path' }) id: string, @param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitFairTradeData> {
+  //   throw new Error('Not implemented');
+  // }
 
 }
 

@@ -87,10 +87,10 @@ export class SubmitInboundWeightTallyController {
    * @param filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})
    * @returns Request was successful
    */
-  @operation('get', '/submitInboundWeightTally')
-  async submitInboundWeightTallyFind(@param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitInboundWeightTally[]> {
-    throw new Error('Not implemented');
-  }
+  // @operation('get', '/submitInboundWeightTally')
+  // async submitInboundWeightTallyFind(@param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitInboundWeightTally[]> {
+  //   throw new Error('Not implemented');
+  // }
 
   /**
    *
@@ -100,10 +100,10 @@ export class SubmitInboundWeightTallyController {
    * @param filter Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})
    * @returns Request was successful
    */
-  @operation('get', '/submitInboundWeightTally/{id}')
-  async submitInboundWeightTallyFindById(@param({ name: 'id', in: 'path' }) id: string, @param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitInboundWeightTally> {
-    throw new Error('Not implemented');
-  }
+  // @operation('get', '/submitInboundWeightTally/{id}')
+  // async submitInboundWeightTallyFindById(@param({ name: 'id', in: 'path' }) id: string, @param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitInboundWeightTally> {
+  //   throw new Error('Not implemented');
+  // }
 
 }
 

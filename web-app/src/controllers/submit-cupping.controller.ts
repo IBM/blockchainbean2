@@ -73,10 +73,10 @@ export class SubmitCuppingController {
    * @param filter Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})
    * @returns Request was successful
    */
-  @operation('get', '/submitCupping')
-  async submitCuppingFind(@param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitCupping[]> {
-    throw new Error('Not implemented');
-  }
+  // @operation('get', '/submitCupping')
+  // async submitCuppingFind(@param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitCupping[]> {
+  //   throw new Error('Not implemented');
+  // }
 
   /**
    *
@@ -86,10 +86,10 @@ export class SubmitCuppingController {
    * @param filter Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})
    * @returns Request was successful
    */
-  @operation('get', '/submitCupping/{id}')
-  async submitCuppingFindById(@param({ name: 'id', in: 'path' }) id: string, @param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitCupping> {
-    throw new Error('Not implemented');
-  }
+  // @operation('get', '/submitCupping/{id}')
+  // async submitCuppingFindById(@param({ name: 'id', in: 'path' }) id: string, @param({ name: 'filter', in: 'query' }) filter: string): Promise<SubmitCupping> {
+  //   throw new Error('Not implemented');
+  // }
 
 }
 
