@@ -479,7 +479,14 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
   ```Error: fabric-ca request register failed with errors [[{"code":0,"message":"Registration of 'user1' failed: Identity 'user1' is already registered"}]]```
 
   go ahead and change the user in **config.json** file, you can use any
-  username you want.
+  username you want. Once you save the **config.json** with a new user, 
+  for example:
+
+  ```
+      "userName": "user4",
+
+  ```
+  Run the same script agian.
 
 
 * #### Start the web client
