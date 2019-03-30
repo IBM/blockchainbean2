@@ -14,7 +14,7 @@ const errorMessage = 'does not exist';
  * by Query
  * Named queries
  */
-export class QueryController {
+export class WorldStateController {
   constructor() {}
 
   /**
@@ -23,7 +23,7 @@ export class QueryController {
 
    * @returns String - everything that is currently in the world state
    */
-  @operation('get', '/query/queryAll', {
+  @operation('get', '/worldstate/queryAll', {
 
     responses: {
       '200': {
@@ -46,7 +46,7 @@ export class QueryController {
    * @param key 
    * @returns Request was successful
    */
-  @operation('get', '/query/{key}', {
+  @operation('get', '/worldstate/{key}', {
     responses: {
       '200': {
         description: 'query the world state by key',
@@ -76,13 +76,22 @@ export class QueryController {
    * 
    * 
 
-   * @param CupId 
+   * @param key 
    * @returns Request was successful
    */
-  // @operation('get', '/queries/getCupData')
-  // async queryGetCupData(@param({name: 'CupId', in: 'query'}) CupId: string): Promise<CupCoffee[]> {
-  //   throw new Error('Not implemented');
-  // }
+  @operation('delete', '/worldstate/{key}')
+  async deleteByKey(@param({ name: 'key', in: 'path' }) key: string): Promise<String> {
+    let networkObj = await blockchainClient.connectToNetwork();
+    let result = await blockchainClient.deleteByKey(networkObj.contract, key);
+    console.log(result)
+    // var rez = JSON.parse(result.toString());
+    console.log('before rez: ')
+    console.log(result)
+    //check if key does not exist, if so, send 404
+    if ( result.indexOf( errorMessage ) > -1 ) {
+      result = new Error(result);
+    }
+    return result 
+  }
 
 }
-

@@ -1,5 +1,5 @@
 // export * from './system.controller';
-export * from './query.controller';
+export * from './world-state.controller';
 export * from './regulator.controller';
 export * from './grower.controller';
 export * from './trader.controller';

@@ -96,6 +96,21 @@ export module BlockChainModule {
       return response;
     }
 
+    async deleteByKey(contract: any, keyPassed: any) {
+
+      let response = await contract.submitTransaction('deleteKey', keyPassed);
+      console.log('delete by key response: ')
+      console.log(JSON.parse(response.toString()))
+      console.log(response.length)
+      if (response.length === 2) {
+        response = `${keyPassed} does not exist`;
+        return response;
+      }
+      response = JSON.parse(response.toString());
+      return response;
+
+    }
+
     async queryByKey(keyPassed: any) {
 
       // let str = 'query'
