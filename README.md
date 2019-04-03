@@ -2,7 +2,7 @@
 
 # Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform V2 Beta
 
-To try the supply chain network API - go here: http://blockchainbeans2.mybluemix.net/ 
+To try the supply chain network API - go here: http://blockchainbeans2.mybluemix.net/ *Currently running into errors with the API. Working on a fix asap. Sorry for any inconvenience caused!*
 - To view all of the data that is currently in the world state (the database that each peer
 holds) go to /explorer and then go down the page until you see `WorldStateController`. Click on `GET/
 worldstate/queryAll`. Then
