@@ -155,22 +155,21 @@ we can view the ledger via the block explorer on IBM Blockchain Platform *
     msg: Successfully enrolled admin user admin and imported it into the wallet
     ```
 
-* #### Register User
-  - Run the `registerUser.js` script.
-    ```bash
-    node registerUser.js
-    ```
+* #### Export Wallet
+  - From your blockchain extension, go to the bottom left corner until you see **FABRIC WALLETS**.
+  Right-click on **local_fabric_wallet** and export it into the `server` directory.
 
-  - You should see the following in the terminal:
-    ```bash
-    Successfully registered and enrolled admin user user1 and imported it into the wallet
-    ```
-  - If you get an error such as this 
+  <p align="center">
+    <img src="exportWallet.png">
+  </p>
   
-  ```Error: fabric-ca request register failed with errors [[{"code":0,"message":"Registration of 'user1' failed: Identity 'user1' is already registered"}]]```
+  - Go ahead and rename the wallet to be just **wallet**. This is the way we have 
+  our wallet referenced in our files. Your folder structure should look like the following,
+  with the admin private and public keys in the wallet directory. 
 
-  go ahead and change the user in **config.json** file, you can use any
-  username you want.
+  <p align="center">
+    <img src="folderStructure.png">
+  </p>
 
 
  Nice. We're pretty much ready to submit transactions on our contract. Go ahead and go 

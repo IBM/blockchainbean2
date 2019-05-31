@@ -8,7 +8,7 @@ const path = require('path');
 const configPath = path.join(process.cwd(), './../server/config.json');
 const configJSON = fs.readFileSync(configPath, 'utf8');
 const config = JSON.parse(configJSON);
-var userName = config.userName;
+var userName = config.appAdmin;
 var gatewayDiscovery = config.gatewayDiscovery;
 var connection_file = config.connection_file;
 
