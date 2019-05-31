@@ -1,6 +1,7 @@
 {
-    "name": "basic-network",
+    "name": "local_fabric",
     "version": "1.0.0",
+    "wallet": "local_fabric_wallet",
     "client": {
         "organization": "Org1",
         "connection": {
@@ -12,16 +13,6 @@
             }
         }
     },
-    "channels": {
-        "mychannel": {
-            "orderers": [
-                "orderer.example.com"
-            ],
-            "peers": {
-                "peer0.org1.example.com": {}
-            }
-        }
-    },
     "organizations": {
         "Org1": {
             "mspid": "Org1MSP",
@@ -29,13 +20,8 @@
                 "peer0.org1.example.com"
             ],
             "certificateAuthorities": [
-                "ca.example.com"
+                "ca.org1.example.com"
             ]
-        }
-    },
-    "orderers": {
-        "orderer.example.com": {
-            "url": "grpc://localhost:17050"
         }
     },
     "peers": {
@@ -44,9 +30,9 @@
         }
     },
     "certificateAuthorities": {
-        "ca.example.com": {
+        "ca.org1.example.com": {
             "url": "http://localhost:17054",
-            "caName": "ca.example.com"
+            "caName": "ca.org1.example.com"
         }
     }
 }

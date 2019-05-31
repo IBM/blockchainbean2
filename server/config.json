@@ -1,9 +1,9 @@
 {
-    "connection_file": "connection.json",
-    "appAdmin": "admin",
-    "appAdminSecret": "adminpw",
-    "orgMSPID": "Org1MSP",
-    "caName": "ca.example.com",
-    "userName": "user1",
-    "gatewayDiscovery": { "enabled": false }
+  "connection_file": "connection.json",
+  "appAdmin": "admin",
+  "appAdminSecret": "adminpw",
+  "orgMSPID": "org1msp",
+  "caName": "ca.org1.example.com",
+  "userName": "admin",
+  "gatewayDiscovery": { "enabled": true, "asLocalhost": true }
 }
