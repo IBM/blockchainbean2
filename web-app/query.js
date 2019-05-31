@@ -11,7 +11,7 @@ const configPath = path.join(process.cwd(), './../server/config.json');
 const configJSON = fs.readFileSync(configPath, 'utf8');
 const config = JSON.parse(configJSON);
 var connection_file = config.connection_file;
-var userName = config.userName;
+var userName = config.appAdmin;
 var gatewayDiscovery = config.gatewayDiscovery;
 
 // connect to the connection file
@@ -29,6 +29,8 @@ async function main() {
 
   // Main try/catch block
   try {
+
+    let response;
 
     const userExists = await wallet.exists(userName);
     if (!userExists) {
@@ -52,7 +54,7 @@ async function main() {
 
     console.log('\nSubmit hello world transaction.');
 
-    let response = await contract.submitTransaction('queryAll');
+    response = await contract.submitTransaction('queryAll');
     
     console.log(response.toString())
     return response;
