@@ -144,16 +144,6 @@ we can view the ledger via the block explorer on IBM Blockchain Platform *
     ```bash
     npm rebuild
     ```
-  
-  - Run the `enrollAdmin.js` script
-    ```bash
-    node enrollAdmin.js
-    ```
-
-  - You should see the following in the terminal:
-    ```bash
-    msg: Successfully enrolled admin user admin and imported it into the wallet
-    ```
 
 * #### Export Wallet
   - From your blockchain extension, go to the bottom left corner until you see **FABRIC WALLETS**.
