@@ -14,8 +14,7 @@ click on `Try it out` and then `Execute`. You should see something like the imag
     </p>
     <br>
  -->
-**🚧🚧🚧🚧🚧Redoing the  supply chain network API  both on ibm.com/blockcheainbean and on here. Should be out soon!🚧🚧🚧**
-
+To try out the supply chain API, go to http://blockchainbeans2.mybluemix.net/explorer/. There you can query for all the supply chain docs, or query for a specific key-value pair that is stored on the blockchain.
 
 
 
