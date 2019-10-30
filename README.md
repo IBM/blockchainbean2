@@ -29,18 +29,14 @@ If you wanted to query for a particular batch of coffee, you can go ahead and
 query for a particular key - in this instance, the cupId. Go to `/query/{key}`
 and query for  -->
 
-This code pattern is based on a recent proof-of-concept developed in collaboration with a coffee roasting company that was nice enough to let us use their supply-chain documents. The finished product of this code pattern is a cloud-based blockchain API, that any other UI app can call. An example UI app that leverages our blockchain API can be found [here](https://www.ibm.com/thought-leadership/blockchainbean/).
+This code pattern is based on a recent proof-of-concept developed in collaboration with a coffee roasting company that was nice enough to let us use their supply-chain documents. The finished product of this code pattern is a cloud-based blockchain API, that any other UI app can call. An example UI app that leverages our blockchain API can be found in the screenshots below.
 
 
 Each cup has a history based on which batch of coffee was used make the cup, which you 
 can see below. Additionally, you can see other details such as who poured the cup, 
-at what time the cup was poured, which type of beans were used, etc. on the [your cup](https://www.ibm.com/thought-leadership/blockchainbean/yourcup/index.html)
-page. Hint, try cupId 'NJB123' for the result shown below.
+at what time the cup was poured, which type of beans were used, etc. For example, a sample cup 'NJB123' for the result shown below.
 
 ![packageFile](/docs/bean.png)
-
-
-All documents that were used in the supply chain are available online, and can be found by clicking the view the blockchain button at https://www.ibm.com/thought-leadership/blockchainbean/
 
 In this code pattern we will create a blockchain app that increases visibility and efficiency in the supply chain of a coffee retailer using IBM Blockchain Platform V2 Beta. We will use different transactions to show different possible actions for the different participants in the supply chain. This sample application will record all transactions on the IBM Blockchain Platform V2 Beta, and enable a coffee retailer to ensure the customer that their coffee is organic and fair-trade. The code pattern can be useful to developers that are looking into learning more about creating applications that integrate supply chains with Hyperledger Fabric.
 
