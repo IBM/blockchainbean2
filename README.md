@@ -2,7 +2,7 @@
 
 # Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform V2 Beta
 
-<!-- To try the supply chain network API - go here: http://blockchainbeans2.mybluemix.net/explorer/
+<!-- To try the supply chain network API - go here: http://blockchainbean2.mybluemix.net/explorer/
 - To view all of the data that is currently in the world state (the database that each peer
 holds) go to /explorer and then go down the page until you see `WorldStateController`. Click on `GET/
 worldstate/queryAll`. Then
@@ -14,7 +14,7 @@ click on `Try it out` and then `Execute`. You should see something like the imag
     </p>
     <br>
  -->
-To try out the supply chain API, go to http://blockchainbeans2.mybluemix.net/explorer/. There you can query for all the supply chain docs, or query for a specific key-value pair that is stored on the blockchain.
+To try out the supply chain API, go to http://blockchainbean2.mybluemix.net/explorer/. There you can query for all the supply chain docs, or query for a specific key-value pair that is stored on the blockchain.
 
 
 
@@ -548,7 +548,7 @@ found [here.](https://github.com/horeaporutiu/blockchainbean2/blob/master/docs/r
 ## Bonus Step - Deploy your local app to the Cloud
 If you want to keep your application running all the time, 
 you'll want to deploy it to the cloud. The goal is to deploy
-something like this: http://blockchainbeans2.mybluemix.net/
+something like this: http://blockchainbean2.mybluemix.net/
 
 To do this, please follow the guide [here:](https://github.com/horeaporutiu/blockchainbean2/blob/master/docs/deploy.md)
 
