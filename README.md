@@ -520,8 +520,7 @@ found [here.](https://github.com/horeaporutiu/blockchainbean2/blob/master/docs/r
 
 ## Bonus Step - Deploy your local app to the Cloud
 If you want to keep your application running all the time, 
-you'll want to deploy it to the cloud. The goal is to deploy
-something like this: http://blockchainbean2.mybluemix.net/
+you'll want to deploy it to the cloud.
 
 To do this, please follow the guide [here:](https://github.com/horeaporutiu/blockchainbean2/blob/master/docs/deploy.md)
 
