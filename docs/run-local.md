@@ -11,9 +11,10 @@
 1. [Clone the Repo](#step-1-clone-the-repo)
 2. [Install Dependencies](#step-2-install-dependencies)
 3. [Package Contract](#step-3-package-contract)
-4. [Install Contract](#step-4-install-contract)
-5. [Instantiate Contract](#step-5-Instantiate-contract)
-6. [Submit Transactions](#step-6-submit-transactions)
+4. [Install and Instantiate Contract](#step-4-install-and-instantiate-contract)
+5. [Export Connection Details](#step-5-export-connection-details)
+6. [Export Local Wallet](#step-6-export-local-wallet)
+7. [Submit Transactions](#step-7-submit-transactions)
 
 
 ## Step 1. Clone the Repo
@@ -61,75 +62,47 @@ Right-click under your folders in your workspace area and then click *Add Folder
   ![packageFile](/docs/packageSuccess.png)
  
  Note that this `.cds` file is extremely important if we want to run 
- our smart contract on the cloud. 
+ our smart contract on the cloud.
 
-## Step 4. Install Contract
+ ## Step 4. Install and Instantiate Contract
+![importContract](https://user-images.githubusercontent.com/10428517/76371236-e0ba3d00-62f6-11ea-82a1-bfa4798985b9.gif)
+- Next, we have to import our contract before we can install it. Click on 
+**View -> Open Command Pallette -> Import Smart Contract**. Next, click 
+on the `gensupplychainnet@0.0.1.cds` file that is at the root of our directory.
+This will be where you cloned this repo.
 
- Next, it's time to install and instantiate our contract on the peer. First click on the blockchain icon in the 
- left side of VSCode. Once you click it, you should see `Smart Contract Packages` and the blockchainbean2@0.0.1 package 
- there. In my picture I have other contracts there as well.
+![installAndInstantiate](https://user-images.githubusercontent.com/10428517/76371514-bae16800-62f7-11ea-9038-039b0fac6967.gif)
+- Now, let's click on *+ Install* and choose the peer that is available. Then the extension will ask you which package to 
+ install. Choose *gensupplychainnet@0.0.1.cds*.
+- Lastly, we need to instantiate the contract to be able to submit transactions 
+on our network. Click on *+ Instantiate* and then choose *gensupplychainnet@0.0.1*.
+- When promted for a function, a private data collection, or and endorsement 
+policy, hit `enter` on your keyboard, which will take all of the defaults.
+- This will instantiate the smart contract. This may take some time. You should see the contract under the *instantiated* tab on the left-hand side, once it 
+is finished instantiating. 
 
-<p align="center">
-  <img src="blockchainView.png">
-</p>
+## Step 5. Export Connection Details
+- Under `FABRIC GATEWAYS`, click on `1 Org Local Fabric - Org1` gateway.
+- When asked to choose an identity to connect with, choose `admin`.
+- Once you are connected, you should see `connected via gateway: 1 Org Local Fabric` 
+under the `FABRIC GATEWAYS` tab as shown in the gif below.
 
-  Go ahead and start your local fabric by clicking on the 
- *three dot symbol* to the right of *LOCAL FABRIC OPS*
- and then *Start Fabric Runtime*. Once the runtime is finished starting, under *Local Fabric 
- Ops* you should see *Smart Contracts* and a section for both *installed* and *instantiated*.
+![export](https://user-images.githubusercontent.com/10428517/76371002-fd09aa00-62f5-11ea-9f6b-cc25e68c410e.gif)
 
-<p align="center">
-  <img src="contracts.png">
-</p>
+- To export your connection profile, right click on the 3 dot menu on the **FABRIC GATEWAYS** pane and `Export Connection Profile` Save this file to fabric-contract-attribute-based-access-control/gateway/local/fabric_connection.json. 
 
- Now, let's click on *+ Install* and choose the peer that is available. Then the extension will ask you which package to 
- install. Choose *blockchainbean2@0.0.1* as shown in the picture.
- 
-![packageFile](/docs/choosePackage.png)
+## Step 6. Export Local Wallet 
+![wallet](https://user-images.githubusercontent.com/10428517/76375176-65f71f00-6302-11ea-8071-d68192905a91.gif)
+- 🚨Under the `FABRIC WALLETS` pane, click on `1 Org Local Fabric - Org1 Wallet`. Note this is very important, if you click on the Orderer wallet at the top, 
+the application will not work! 🚨
+- Export and save the wallet to `blockchainbean2/server/wallet`
+- Once you're done exporting the wallet and the connection profile, your directory 
+structure should look like below:
 
- 
-  If all goes well, you should get a notification as shown 
- below.
-
-![packageFile](/docs/successInstall.png)
-
-
-## Step 5. Instantiate Contract
-You guessed it. Next, it's time to instantiate. 
- 
-  Click on *+ Instantiate* 
-
-<p align="center">
-  <img src="instantiate.png">
-</p>
-
-and then choose 
- *mychannel* for the channel to instantiate the contract on.
-
-![packageFile](/docs/channel.png)
-
-Next, the extension will ask you 
- to choose a smart contract and version to instantiate. Click on *blockchainbean2@0.0.1*.
-![packageFile](/docs/version.png)
+![dirStruct](https://media.github.ibm.com/user/79254/files/21cb6200-645b-11ea-8dbd-00806fc391a8)
 
 
- Next, for the optional function, type in *init*.
-![packageFile](/docs/function.png)
-
-
-Leave the arguments blank, and hit *enter* 
- on your keyboard. 
-![packageFile](/docs/blank.png)
-
-
- This will instantiate the smart contract. You should see the contract 
- under the *instantiated* tab on the left-hand side, as shown in the picture. 
-
-<p align="center">
-  <img src="instantiated.png">
-</p>
-
-## Step 6. Submit Transactions
+## Step 7. Submit Transactions
 *Note that this step is the same whether for local or cloud deployment. The only 
 different is that we will use queries to see the ledger locally, whereas on cloud 
 we can view the ledger via the block explorer on IBM Blockchain Platform *
