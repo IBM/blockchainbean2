@@ -105,15 +105,15 @@ different is that we will use queries to see the ledger locally, whereas on clou
 we can view the ledger via the block explorer on IBM Blockchain Platform *
 
 #### Enroll admin
-  - First, navigate to the `server` directory, and install the node dependencies.
-    ```bash
-    cd server
-    npm install
-    ```
-  - ⚠️ if you get a grpc error run:
-    ```bash
-    npm rebuild
-    ``` 
+- First, navigate to the `server` directory, and install the node dependencies.
+  ```bash
+  cd server
+  npm install
+  ```
+- ⚠️ if you get a grpc error run:
+  ```bash
+  npm rebuild
+  ``` 
 
  ```
 blockchainbean2$ cd web-app
