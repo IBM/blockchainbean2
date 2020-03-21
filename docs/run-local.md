@@ -97,9 +97,7 @@ the application will not work! 🚨
 - Once you're done exporting the wallet and the connection profile, your directory 
 structure should look like below:
 
-  <p align="center">
-    <img src="folderStructure.png">
-  </p>
+![pic](https://user-images.githubusercontent.com/10428517/77218871-3d82d800-6aed-11ea-9527-29781b9240fa.png)
 
 ## Step 7. Submit Transactions
 *Note that this step is the same whether for local or cloud deployment. The only 
