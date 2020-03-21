@@ -65,18 +65,14 @@ Right-click under your folders in your workspace area and then click *Add Folder
  our smart contract on the cloud.
 
  ## Step 4. Install and Instantiate Contract
-![importContract](https://user-images.githubusercontent.com/10428517/76371236-e0ba3d00-62f6-11ea-82a1-bfa4798985b9.gif)
-- Next, we have to import our contract before we can install it. Click on 
-**View -> Open Command Pallette -> Import Smart Contract**. Next, click 
-on the `gensupplychainnet@0.0.1.cds` file that is at the root of our directory.
-This will be where you cloned this repo.
-
+ - **Note that in the gif we install a different contract, but the process is the same**
 ![installAndInstantiate](https://user-images.githubusercontent.com/10428517/76371514-bae16800-62f7-11ea-9038-039b0fac6967.gif)
 - Now, let's click on *+ Install* and choose the peer that is available. Then the extension will ask you which package to 
- install. Choose *gensupplychainnet@0.0.1.cds*.
+ install. Choose *blockchainbean2@0.0.1.cds*.
 - Lastly, we need to instantiate the contract to be able to submit transactions 
-on our network. Click on *+ Instantiate* and then choose *gensupplychainnet@0.0.1*.
-- When promted for a function, a private data collection, or and endorsement 
+on our network. Click on *+ Instantiate* and then choose *blockchainbean2@0.0.1*.
+- When promted for a function enter `init`.
+- When prompted for a private data collection, or and endorsement 
 policy, hit `enter` on your keyboard, which will take all of the defaults.
 - This will instantiate the smart contract. This may take some time. You should see the contract under the *instantiated* tab on the left-hand side, once it 
 is finished instantiating. 
@@ -89,7 +85,9 @@ under the `FABRIC GATEWAYS` tab as shown in the gif below.
 
 ![export](https://user-images.githubusercontent.com/10428517/76371002-fd09aa00-62f5-11ea-9f6b-cc25e68c410e.gif)
 
-- To export your connection profile, right click on the 3 dot menu on the **FABRIC GATEWAYS** pane and `Export Connection Profile` Save this file to fabric-contract-attribute-based-access-control/gateway/local/fabric_connection.json. 
+- **Note that in the gif we export to a different location but the process is the same**
+
+- To export your connection profile, right click on the 3 dot menu on the **FABRIC GATEWAYS** pane and `Export Connection Profile` Save this file to `blockchainbean2/server/connection.json`. 
 
 ## Step 6. Export Local Wallet 
 ![wallet](https://user-images.githubusercontent.com/10428517/76375176-65f71f00-6302-11ea-8071-d68192905a91.gif)
