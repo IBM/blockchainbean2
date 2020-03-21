@@ -115,7 +115,7 @@ we can view the ledger via the block explorer on IBM Blockchain Platform *
   npm rebuild
   ``` 
 
- ```
+```
 blockchainbean2$ cd web-app
 web-app$ node query.js
 ```
