@@ -113,27 +113,7 @@ we can view the ledger via the block explorer on IBM Blockchain Platform *
   - ⚠️ if you get a grpc error run:
     ```bash
     npm rebuild
-    ```
-
-* #### Export Wallet
-  - From your blockchain extension, go to the bottom left corner until you see **FABRIC WALLETS**.
-  Right-click on **local_fabric_wallet** and export it into the `server` directory.
-
-  <p align="center">
-    <img src="exportWallet.png">
-  </p>
-  
-  - Go ahead and rename the wallet to be just **wallet**. This is the way we have 
-  our wallet referenced in our files. Your folder structure should look like the following,
-  with the admin private and public keys in the wallet directory. 
-
-  <p align="center">
-    <img src="folderStructure.png">
-  </p>
-
-
- Nice. We're pretty much ready to submit transactions on our contract. Go ahead and go 
- into your web-app directory and run the query script with the commands shown below. 
+    ``` 
 
  ```
 blockchainbean2$ cd web-app
