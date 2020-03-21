@@ -97,8 +97,9 @@ the application will not work! 🚨
 - Once you're done exporting the wallet and the connection profile, your directory 
 structure should look like below:
 
-![dirStruct](https://media.github.ibm.com/user/79254/files/21cb6200-645b-11ea-8dbd-00806fc391a8)
-
+  <p align="center">
+    <img src="folderStructure.png">
+  </p>
 
 ## Step 7. Submit Transactions
 *Note that this step is the same whether for local or cloud deployment. The only 
