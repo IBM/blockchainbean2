@@ -159,84 +159,117 @@ minutes to provision, so please be patient!</b>
 
 We will build a network as provided by the IBM Blockchain Platform [documentation](https://console.bluemix.net/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network).  This will include creating a channel with a single peer organization with its own MSP and CA (Certificate Authority), and an orderer organization with its own MSP and CA. We will create the respective identities to deploy peers and operate nodes.
 
+We will build a network as provided by the IBM Blockchain Platform [documentation](https://console.bluemix.net/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network).  This will include creating a channel with a single peer organization with its own MSP and CA (Certificate Authority), and an orderer organization with its own MSP and CA. We will create the respective identities to deploy peers and operate nodes.
+
 ### Create your organization and your entry point to your blockchain
 
-* #### Create your peer organization CA
-  - Click <b>Add Certificate Authority</b>.
-  - Click <b>IBM Cloud</b> under <b>Create Certificate Authority</b> and <b>Next</b>.
-  - Give it a <b>Display name</b> of `Org1 CA`.  
-  - Specify an <b>Admin ID</b> of `admin` and <b>Admin Secret</b> of `adminpw`.
+* #### Create your Voter Organization CA
+  - Navigate to the <b>Nodes</b> tab in the left navigation and click <b>Add Certificate Authority</b>.
+  - Click <b>Create an IBM Cloud Certificate Authority</b> and <b>Next</b>. 
+  - Give it a <b>Display name</b> of `Voter CA`. Note that the gif names the 
+  certificate a more generic name.  
+  - Specify an <b>Admin ID</b> of `admin` and <b>Admin Secret</b> of `adminpw` , then click <b>Next</b>.
+  - Review the summary and click <b>Add Certificate Authority</b>
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/create-peer-org1-ca.gif">
+  <img src="docs/doc-gifs/voterCA.gif">
+</p>
+<br>
+
+* #### Associate the voter organization CA admin identity
+ - In the Nodes tab, select the <b>Voter CA</b> once it is running (indicated by the green box in the tile).
+ - Click <b>Associate identity</b> on the CA overview panel.
+ - On the side panel, select <b>Enroll ID</b>.
+ - Provide an <b>Enroll ID</b> of `admin` and an <b>Enroll secret</b> of `adminpw`. Use the default value of `Voter CA Admin` for the <b>Identity display name</b>.
+ - Click <b>Associate identity</b> to add the identity into your wallet and associate the admin identity with the <b>Voter CA</b>.
+
+<br>
+<p align="center">
+  <img src="docs/doc-gifs/assoociate-ca-identity.gif">
 </p>
 <br>
 
 
 * #### Use your CA to register identities
-  - Select the <b>Org 1 CA</b> Certificate Authority that we created.
-  - First, we will register an admin for our organization "org1". Click on the <b>Register User</b> button.  Give an <b>Enroll ID</b> of `org1admin`, and <b>Enroll Secret</b> of `org1adminpw`.  Click <b>Next</b>.  Set the <b>Type</b> for this identity as `client` and select `org1` from the affiliated organizations drop-down list. We will leave the <b>Maximum enrollments</b> and <b>Add Attributes</b> fields blank.
-  - We will repeat the process to create an identity of the peer. Click on the <b>Register User</b> button.  Give an <b>Enroll ID</b> of `peer1`, and <b>Enroll Secret</b> of `peer1pw`.  Click <b>Next</b>.  Set the <b>Type</b> for this identity as `peer` and select `org1` from the affiliated organizations drop-down list. We will leave the <b>Maximum enrollments</b> and <b>Add Attributes</b> fields blank.
+  - We will register an admin for our voter organization. Click on the <b>Register User</b> button.  Give an <b>Enroll ID</b> of `voterAdmin`, and <b>Enroll Secret</b> of `voterAdminpw`. Set the <b>Type</b> for this identity as `client`. We can specify to Use root affiliation or uncheck this field and select from any of the affiliated organizations from the drop-down list. We will leave the Maximum enrollments field blank. Click <b>Next</b>.
+  click <b>Register User</b>.
+  - We will not be adding any attributes to this user. Click <b>Register user</b>.
+  - We will repeat the process to create an identity of the peer. Click on the <b>Register User</b> button.  Give an <b>Enroll ID</b> of `peer1`, and <b>Enroll Secret</b> of `peer1pw`. Set the <b>Type</b> for this identity as `peer`. We can specify to Use root affiliation or uncheck this field and select from any of the affiliated organizations from the drop-down list. We will leave the Maximum enrollments field blank. Click <b>Next</b>.  Click <b>Next</b>. Then on the next page, click <b>Register User</b>.
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/org1-ca-register-identities.gif">
+  <img src="docs/doc-gifs/registerIdentities.gif">
 </p>
 <br>
 
 
 * #### Create the peer organization MSP definition
   - Navigate to the <b>Organizations</b> tab in the left navigation and click <b>Create MSP definition</b>.
-  - Enter the <b>MSP Display name</b> as `Org1 MSP` and an <b>MSP ID</b> of `org1msp`.
-  - Under <b>Root Certificate Authority</b> details, specify the peer CA that we created `Org1 CA` as the root CA for the organization.
-  - Give the <b>Enroll ID</b> and <b>Enroll secret</b> for your organization admin, `org1admin` and `org1adminpw`. Then, give the Identity name, `Org1 Admin`.
+  - Enter the <b>MSP Display name</b> as `Voter MSP` and an <b>MSP ID</b> of `votermsp`.
+  - Under <b>Root Certificate Authority</b> details, specify the peer CA that we created `Voter CA` as the root CA for the organization.
+  - Give the <b>Enroll ID</b> and <b>Enroll secret</b> for your organization admin, `voterAdmin` and `voterAdminpw`. Then, give the Identity name, `Voter Admin`.
   - Click the <b>Generate</b> button to enroll this identity as the admin of your organization and export the identity to the wallet. Click <b>Export</b> to export the admin certificates to your file system. Finally click <b>Create MSP definition</b>.
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/peer-org-msp-def.gif">
+  <img src="docs/doc-gifs/voterMSP.gif">
 </p>
 <br>
 
 
 * Create a peer
   - On the <b>Nodes</b> page, click <b>Add peer</b>.
-  - Click <b>IBM Cloud</b> under Create a new peer and <b>Next</b>.
-  - Give your peer a <b>Display name</b> of `Peer Org1`.
-  - On the next screen, select `Org1 CA` as your <b>Certificate Authority</b>. Then, give the <b>Enroll ID</b> and <b>Enroll secret</b> for the peer identity that you created for your peer, `peer1`, and `peer1pw`. Then, select the <b>Administrator Certificate (from MSP)</b>, `Org1 MSP`, from the drop-down list and click <b>Next</b>.
-  - Give the <b>TLS Enroll ID</b>, `admin`, and <b>TLS Enroll secret</b>, `adminpw`, the same values are the Enroll ID and Enroll secret that you gave when creating the CA.  Leave the <b>TLS CSR hostname</b> blank.
-  - The last side panel will ask you to <b>Associate an identity</b> and make it the admin of your peer. Select your peer admin identity `Org1 Admin`.
-  - Review the summary and click <b>Submit</b>.
+  - Click <b>Create an IBM Cloud peer </b> and then click <b>Next</b>.
+  - Give your peer a <b>Display name</b> of `Voter Peer` and then click <b>Next</b>.
+  - On the next screen, select `Voter CA` as your <b>Certificate Authority</b>. Then, give the <b>Enroll ID</b> and <b>Enroll secret</b> for the peer identity that you created for your peer, `peer1`, and `peer1pw`. Then, select the <b>Organization MSP as </b>, `Voter MSP`, from the drop-down list. Leave the <b>TLS CSR hostname</b> blank and click <b>Next</b>.
+  - The next step is to <b>Associate an identity</b> with this peer to make it the admin of your peer. Select your peer admin identity Org1 Admin and click Next.
+  - Review the summary and click <b>Add peer</b>.
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/create-peer.gif">
+  <img src="docs/doc-gifs/voterPeer.gif">
 </p>
 <br>
 
 ### Create the node that orders transactions
 
 * #### Create your orderer organization CA
-  - Click <b>Add Certificate Authority</b>.
-  - Click <b>IBM Cloud</b> under <b>Create Certificate Authority</b> and <b>Next</b>.
+  - Navigate to the <b>Nodes</b> tab in the left navigation and click <b>Add Certificate Authority</b>.
+  - Click <b>Create an IBM Cloud Certificate Authority</b> and click <b>Next</b>.
   - Give it a unique <b>Display name</b> of `Orderer CA`.  
-  - Specify an <b>Admin ID</b> of `admin` and <b>Admin Secret</b> of `adminpw`.
+  - Specify an <b>Admin ID</b> of `admin` and <b>Admin Secret</b> of `adminpw` and click <b>Next</b>
+  Review the summary and click Add Certificate Authority.
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/orderer-org-ca.gif">
+  <img src="docs/doc-gifs/ordererCA.gif">
+</p>
+<br>
+
+* #### Associate the orderer organization CA admin identity
+ - In the Nodes tab, select the <b>Orderer CA</b> once it is running (indicated by the green box in the tile).
+ - Click <b>Associate identity</b> on the CA overview panel.
+ - On the side panel, select <b>Enroll ID</b>.
+ - Provide an <b>Enroll ID</b> of `admin` and an <b>Enroll secret</b> of `adminpw`. Use the default value of `Orderer CA Admin` for the <b>Identity display name</b>.
+ - Click <b>Associate identity</b> to add the identity into your wallet and associate the admin identity with the <b>Orderer CA</b>.
+
+<br>
+<p align="center">
+  <img src="docs/doc-gifs/assoociate-ca-identity.gif">
 </p>
 <br>
 
 * #### Use your CA to register orderer and orderer admin identities
-  - In the <b>Nodes</b> tab, select the <b>Orderer CA</b> Certificate Authority that we created.
-  - First, we will register an admin for our organization. Click on the <b>Register User</b> button.  Give an <b>Enroll ID</b> of `ordereradmin`, and <b>Enroll Secret</b> of `ordereradminpw`.  Click <b>Next</b>.  Set the <b>Type</b> for this identity as `client` and select `org1` from the affiliated organizations drop-down list. We will leave the <b>Maximum enrollments</b> and <b>Add Attributes</b> fields blank.
-  - We will repeat the process to create an identity of the orderer. Click on the <b>Register User</b> button.  Give an <b>Enroll ID</b> of `orderer1`, and <b>Enroll Secret</b> of `orderer1pw`.  Click <b>Next</b>.  Set the <b>Type</b> for this identity as `peer` and select `org1` from the affiliated organizations drop-down list. We will leave the <b>Maximum enrollments</b> and <b>Add Attributes</b> fields blank.
+  - In the <b>Nodes</b> tab, select the <b>Orderer CA</b> Certificate Authority that we created and ensure the admin identity that was created for the CA is visible in the table.
+  - We will register an admin for our organization. Click on the <b>Register User</b> button.  Give an <b>Enroll ID</b> of `ordererAdmin`, and <b>Enroll Secret</b> of `ordererAdminpw`. Set the <b>Type</b> for this identity as `client`. We can specify to <b>Use root affiliation</b> or uncheck this field and select from any of the affiliated organizations from the drop-down list. We will leave the <b>Maximum enrollments</b> field blank. Click Next.
+  - We will not be adding any attributes to this user. Click <b>Register user</b>.
+  - We will repeat the process to create an identity of the orderer. Click on the <b>Register User</b> button.  Give an <b>Enroll ID</b> of `orderer1`, and <b>Enroll Secret</b> of `orderer1pw`.  Set the <b>Type</b> for this identity as `orderer`. We can specify to Use root affiliation or uncheck this field and select from any of the affiliated organizations from the drop-down list. Click <b>Next</b>.
+  - We will not be adding any attributes to this user. Click <b>Register user</b>.
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/orderer-ca-register-identities.gif">
+  <img src="docs/doc-gifs/ordererIdentities.gif">
 </p>
 <br>
 
@@ -245,39 +278,39 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
   - Navigate to the <b>Organizations</b> tab in the left navigation and click <b>Create MSP definition</b>.
   - Enter the <b>MSP Display name</b> as `Orderer MSP` and an <b>MSP ID</b> of `orderermsp`.
   - Under <b>Root Certificate Authority</b> details, specify the peer CA that we created `Orderer CA` as the root CA for the organization.
-  - Give the <b>Enroll ID</b> and <b>Enroll secret</b> for your organization admin, `ordereradmin` and `ordereradminpw`. Then, give the <b>Identity name</b>, `Orderer Admin`.
+  - Give the <b>Enroll ID</b> and <b>Enroll secret</b> for your organization admin, `ordererAdmin` and `ordererAdminpw`. Then, give the <b>Identity name</b>, `Orderer Admin`.
   - Click the <b>Generate</b> button to enroll this identity as the admin of your organization and export the identity to the wallet. Click <b>Export</b> to export the admin certificates to your file system. Finally click <b>Create MSP definition</b>.
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/orderer-org-msp-def.gif">
+  <img src="docs/doc-gifs/ordererMSP.gif">
 </p>
 <br>
 
 * #### Create an orderer
   - On the <b>Nodes</b> page, click <b>Add orderer</b>.
-  - Click <b>IBM Cloud</b> and proceed with <b>Next</b>.
-  - Give your peer a <b>Display name</b> of `Orderer`.
-  - On the next screen, select `Orderer CA` as your <b>Certificate Authority</b>. Then, give the <b>Enroll ID</b> and <b>Enroll secret</b> for the peer identity that you created for your orderer, `orderer1`, and `orderer1pw`. Then, select the <b>Administrator Certificate (from MSP)</b>, `Orderer MSP`, from the drop-down list and click <b>Next</b>.
+  - Click <b>IBM Cloud Orderering Service</b> and proceed with <b>Next</b>.
+  - Give <b>Ordering service Display name</b> of `Orderer` and click <b>Next</b>
+  - On the next screen, select Orderer CA as the <b>Certificate Authority</b>. Then, give the <b>Ordering service</b> enroll ID and <b>Ordering service</b> enroll secret for the peer identity that you created for your orderer, that is, `orderer1`, and `orderer1pw`. Select the <b>Organization MSP</b> as `OrdererMSP`, from the drop-down list. Leave the TLS CSR hostname blank. Click Next.
   - Give the <b>TLS Enroll ID</b>, `admin`, and <b>TLS Enroll secret</b>, `adminpw`, the same values are the Enroll ID and Enroll secret that you gave when creating the CA.  Leave the <b>TLS CSR hostname</b> blank.
-  - The last side panel will ask to <b>Associate an identity</b> and make it the admin of your peer. Select your peer admin identity `Orderer Admin`.
-  - Review the summary and click <b>Submit</b>.
+  - The next step is to <b>Associate an identity</b> with this orderer to make it the admin of your orderer. Select your peer admin identity `Orderer Admin` and click Next.
+  - Review the summary and click <b>Add ordering service</b>.
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/create-orderer.gif">
+  <img src="docs/doc-gifs/createOrderer.gif">
 </p>
 <br>
 
 * #### Add organization as Consortium Member on the orderer to transact
-  - Navigate to the <b>Nodes</b> tab, and click on the <b>Orderer</b> that we created.
+  - Navigate to the <b>Nodes</b> tab, and click on the <b>Orderer</b> that we created. Ensure it is green first.
   - Under <b>Consortium Members</b>, click <b>Add organization</b>.
-  - From the drop-down list, select `Org1 MSP`, as this is the MSP that represents the peer's organization org1.
-  - Click <b>Submit</b>.
+  - From the drop-down list, select `Voter MSP`, as this is the MSP that represents the peer's <b>Voter</b> organization.
+  - Click <b>Add Organization</b>.
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/add-org-orderer.gif">
+  <img src="docs/doc-gifs/consortium.gif">
 </p>
 <br>
 
@@ -289,14 +322,14 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
   - Click <b>Create channel</b>.
   - Give the channel a name, `mychannel`.
   - Select the orderer you created, `Orderer` from the orderers drop-down list.
-  - Select the MSP identifying the organization of the channel creator from the drop-down list. This should be `Org1 MSP (org1msp)`.
-  - Associate available identity as `Org1 Admin`.
-  - Click <b>Add</b> next to your organization. Make your organization an <b>Operator</b>.
-  - Click <b>Create</b>.
+  - Under <b>Organizations</b>, select *Voter MSP* and then click *Add*.  This adds the organization <b>Voter</b> as a membe of this channel.  Next make your organization an <b>Operator</b>.
+  - Scroll down to the <b>Creator organization</b>.  Select the MSP identifying the organization from the drop-down list. This should be `Voter MSP (votermsp)`.
+  - Associate available identity as `Voter Admin`.
+  - Click <b>Create channel</b>.
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/create-channel.gif">
+  <img src="docs/doc-gifs/createChannel.gif">
 </p>
 <br>
 
@@ -305,12 +338,12 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
   - Click <b>Join channel</b> to launch the side panels.
   - Select your `Orderer` and click <b>Next</b>.
   - Enter the name of the channel you just created. `mychannel` and click <b>Next</b>.
-  - Select which peers you want to join the channel, click `Peer Org1` .
-  - Click <b>Submit</b>.
+  - Select which peers you want to join the channel, click `Voter Peer` .
+  - Click <b>Join Channel</b>.
 
 <br>
 <p align="center">
-  <img src="docs/doc-gifs/join-channel.gif">
+  <img src="docs/doc-gifs/joinChannel.gif">
 </p>
 <br>
 
