@@ -174,12 +174,14 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 <br>
 
 * #### Associate the identity
-![associateId](https://user-images.githubusercontent.com/10428517/78854263-b632d100-79d5-11ea-8b7d-40eb6adae782.gif)
+
  - In the Nodes tab, select the <b>Org1 CA</b> once it is running (indicated by the green box in the tile).
  - Click <b>Associate identity</b> on the CA overview panel.
  - On the side panel, select <b>Enroll ID</b>.
  - Provide an <b>Enroll ID</b> of `admin` and an <b>Enroll secret</b> of `adminpw`. Use the default value of `Org1 CA Admin` for the <b>Identity display name</b>.
  - Click <b>Associate identity</b>.
+
+ ![associateId](https://user-images.githubusercontent.com/10428517/78854263-b632d100-79d5-11ea-8b7d-40eb6adae782.gif)
 
 * #### Use your CA to register identities
   - Select the <b>Org 1 CA</b> Certificate Authority that we created.
@@ -237,12 +239,14 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 <br>
 
 * #### Associate the identity
-![associateId](https://user-images.githubusercontent.com/10428517/78854263-b632d100-79d5-11ea-8b7d-40eb6adae782.gif)
+
  - In the Nodes tab, select the <b>Orderer CA</b> once it is running (indicated by the green box in the tile).
  - Click <b>Associate identity</b> on the CA overview panel.
  - On the side panel, select <b>Enroll ID</b>.
  - Provide an <b>Enroll ID</b> of `admin` and an <b>Enroll secret</b> of `adminpw`. Use the default value of `Orderer CA Admin` for the <b>Identity display name</b>.
  - Click <b>Associate identity</b>.
+
+ ![associateId](https://user-images.githubusercontent.com/10428517/78854263-b632d100-79d5-11ea-8b7d-40eb6adae782.gif)
 
 * #### Use your CA to register orderer and orderer admin identities
   - In the <b>Nodes</b> tab, select the <b>Orderer CA</b> Certificate Authority that we created.
