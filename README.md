@@ -1,5 +1,9 @@
 <!-- [![Build Status](https://travis-ci.org/IBM/blockchainbean.svg?branch=master)](https://travis-ci.org/IBM/blockchainbean) -->
 
+# WARNING: This repository is no longer maintained :warning:
+
+> This repository will not be updated. I will check periodically for pull requests, but do not expect a quick response. 
+
 # Create a fair trade supply network with Hyperledger Fabric and IBM Blockchain Platform V2
 
 This code pattern is based on a recent proof-of-concept developed in collaboration with a coffee roasting company that was nice enough to let us use their supply-chain documents. The finished product of this code pattern is a cloud-based blockchain API, that any other UI app can call. An example UI app that leverages our blockchain API can be found in the screenshots below.
