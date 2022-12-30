@@ -64,7 +64,7 @@
     "fabric-network": "^1.4.0"
   },
   "devDependencies": {
-    "@loopback/build": "^4.0.1",
+    "@loopback/build": "^9.0.6",
     "@loopback/testlab": "^1.0.5",
     "@loopback/tslint-config": "^2.0.0",
     "@types/node": "^10.11.2",
